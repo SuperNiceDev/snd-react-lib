@@ -19,6 +19,7 @@
     "paths": {
       "@src/*": ["src/*"],
     },
+    "types": ["@testing-library/jest-dom"],
   },
   "exclude": [
     "build",

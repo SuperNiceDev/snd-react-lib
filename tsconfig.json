@@ -20,6 +20,7 @@
       "@src/*": ["src/*"],
     },
     "types": ["@testing-library/jest-dom"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "exclude": [
     "build",

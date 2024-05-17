@@ -23,20 +23,16 @@ module.exports = {
           },
         },
       },
+
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
+        test: /\.((c|sa|sc)ss)$/i,
         use: [
           "style-loader",
           {
             loader: "css-loader",
             options: {
-              sourceMap: true,
               importLoaders: 1,
+              sourceMap: true,
               // https://github.com/webpack-contrib/css-loader#modules
               modules: {
                 auto: /\.module\.\w+$/i,
@@ -55,30 +51,25 @@ module.exports = {
                   const newLocalname =
                     localName === "root" ? "_" : `_${localName}`;
 
+                  // console.log("fileName: ", fileName);
                   return `${fileName}${newLocalname}`;
                 },
               },
             },
           },
-          "sass-loader",
+          {
+            loader: "sass-loader",
+          },
         ],
       },
       {
         test: /\.styl$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "stylus-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(jpg|gif|png|svg|woff|woff2|eot|ttf)$/,
-        dependency: { not: ["url"] },
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 10 * 1024 * 1024,
-            },
-          },
-        ],
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        type: "asset",
       },
     ],
   },

@@ -1,7 +1,7 @@
 import React from "react";
-import type { Meta } from "@storybook/react";
 
 import Text, { IText, Tags } from "@src/components/atoms/Text";
+import type { Meta } from "@storybook/react";
 
 import css from "./Text.stories.module.scss";
 

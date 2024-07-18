@@ -1,7 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
-import path, { join, dirname } from "path";
+import path from "path";
 
-const custom = require("../webpack.dev.js");
+// const webpackDevConfFunc = require("../webpack.dev.js");
+const webpackDevConfFunc = require("../webpack.dev.js");
+const webpackDevConf = webpackDevConfFunc();
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -27,9 +29,8 @@ const config: StorybookConfig = {
       module: {
         rules: [
           ...config.module.rules,
-          custom.module.rules[2],
-          custom.module.rules[3],
-          custom.module.rules[4],
+          webpackDevConf.module.rules[2],
+          webpackDevConf.module.rules[3],
         ],
       },
     };

@@ -1,90 +1,155 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
+const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const ReactRefreshBabel = require("react-refresh/babel");
 
-module.exports = {
-  entry: "./src/index.tsx",
-  resolve: {
-    alias: {
-      "@src": path.resolve(__dirname, "src"),
-      "js-dom-utils": path.resolve(__dirname, "lib/js-dom-utils/src"),
+module.exports = (env) => {
+  // const isProduction = env.NODE_ENV === "production";
+  // const dotenvFilename = isProduction ? ".env.production" : ".env.development";
+
+  return {
+    entry: "./src/index.tsx",
+    resolve: {
+      alias: {
+        "@src": path.resolve(__dirname, "src"),
+        "js-dom-utils": path.resolve(__dirname, "lib/js-dom-utils/src"),
+        // '@assets': path.resolve(__dirname, 'src/assets/'),
+      },
+      extensions: [".ts", ".tsx", ".js"],
     },
-    extensions: [".ts", ".tsx", ".js"],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            plugins: [ReactRefreshBabel],
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx|ts|tsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              plugins: [ReactRefreshBabel],
+            },
           },
         },
-      },
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          // https://webpack.js.org/loaders/css-loader/#pure-css-css-modules-and-postcss
+          // For pure CSS - /\.css$/i,
+          // For Sass/SCSS - /\.((c|sa|sc)ss)$/i,
+          // For Less - /\.((c|le)ss)$/i,
+          // test: /\.((c|sa|sc)ss)$/i,
+          test: /\.((sa|sc)ss)$/i,
+          exclude: /node_modules/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                // Run `postcss-loader` on each CSS `@import` and CSS modules/ICSS imports, do not forget that `sass-loader` compile non CSS `@import`'s into a single file
+                // If you need run `sass-loader` and `postcss-loader` on each CSS `@import` please set it to `2`
+                importLoaders: 1,
+                sourceMap: true,
+                // https://github.com/webpack-contrib/css-loader#modules
+                modules: {
+                  auto: /\.module\.\w+$/i,
+                  // localIdentName: "[name]_[local]_[hash:base64:5]",
+                  getLocalIdent: (
+                    context,
+                    localIdentName,
+                    localName,
+                    options,
+                  ) => {
+                    const fileName = context.resourcePath
+                      .split("/")
+                      .pop()
+                      .split(".module.scss")[0]
+                      .replace(".", "_");
+                    const newLocalname =
+                      localName === "root" ? "_" : `_${localName}`;
 
-      {
-        test: /\.((c|sa|sc)ss)$/i,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              sourceMap: true,
-              // https://github.com/webpack-contrib/css-loader#modules
-              modules: {
-                auto: /\.module\.\w+$/i,
-                // localIdentName: "[name]_[local]_[hash:base64:5]",
-                getLocalIdent: (
-                  context,
-                  localIdentName,
-                  localName,
-                  options,
-                ) => {
-                  const fileName = context.resourcePath
-                    .split("/")
-                    .pop()
-                    .split(".module.scss")[0]
-                    .replace(".", "_");
-                  const newLocalname =
-                    localName === "root" ? "_" : `_${localName}`;
-
-                  // console.log("fileName: ", fileName);
-                  return `${fileName}${newLocalname}`;
+                    // console.log("fileName: ", fileName);
+                    return `${fileName}${newLocalname}`;
+                  },
                 },
               },
             },
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
-      },
-      {
-        test: /\.styl$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        type: "asset",
-      },
-    ],
-  },
-  devtool: "eval-cheap-module-source-map",
-  devServer: {
-    hot: true,
-    port: "auto",
-    historyApiFallback: true,
-    client: {
-      overlay: false,
+            // {
+            //   loader: "postcss-loader",
+            //   options: { plugins: () => [postcssPresetEnv({ stage: 0 })] },
+            // },
+            // Can be `less-loader`
+            {
+              loader: "sass-loader",
+            },
+          ],
+        },
+        {
+          test: /\.styl$/,
+          exclude: /node_modules/,
+          // use: [
+          //   'style-loader',
+          //   {
+          //     loader: "css-loader",
+          //     // options: {
+          //     //   sourceMap: true,
+          //     // },
+          //   },
+          //   // {
+          //   //   loader: 'resolve-url-loader',
+          //   //   options: {
+          //   //     sourceMap: true,
+          //   //   },
+          //   // },
+          //   {
+          //     loader: "stylus-loader",
+          //     options: {
+          //       sourceMap: true,
+          //       stylusOptions: {
+          //         resolveURL: true,
+          //       },
+          //     },
+          //   },
+          // ],
+          use: ["style-loader", "css-loader", "stylus-loader"],
+        },
+        {
+          // https://webpack.js.org/guides/asset-modules/
+          test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+          type: "asset",
+        },
+      ],
     },
-  },
-  output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "bundle.js",
-  },
-  plugins: [new ReactRefreshWebpackPlugin({ overlay: false })],
+    // devtool: 'source-map',
+    devtool: "eval-cheap-module-source-map",
+    devServer: {
+      hot: true,
+      port: "auto",
+      // static: path.resolve(__dirname, "dist"),
+      historyApiFallback: true,
+      client: {
+        overlay: false,
+        // overlay: {
+        //   warnings: false,
+        //   errors: false,
+        // },
+      },
+    },
+    output: {
+      path: path.resolve(__dirname, "public"),
+      filename: "bundle.js",
+    },
+    plugins: [
+      new ReactRefreshWebpackPlugin({ overlay: false }),
+      new Dotenv({
+        // path: dotenvFilename,
+        path: ".env",
+      }),
+      // https://dev.to/knitesh/using-specific-env-file-in-react-webpack-4pkj
+      // new webpack.DefinePlugin({
+      //   "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV),
+      // }),
+    ],
+  };
 };

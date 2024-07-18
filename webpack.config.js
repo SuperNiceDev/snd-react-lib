@@ -1,3 +1,4 @@
 module.exports = function (env) {
-  return require(`./webpack.${env.switch}.js`)
-}
+  const conf = require(`./webpack.${env.switch}.js`);
+  return conf(env);
+};

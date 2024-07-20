@@ -8,11 +8,11 @@
     "build": "webpack --env switch=prod",
     "story": "storybook dev --ci -p 6006",
     "story-build": "storybook build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix --ext .js,.ts,.tsx",
     "removeNodeModules": "rm -rf ./node_modules",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "test": "jest --watch"
   },
   "browserslist": {

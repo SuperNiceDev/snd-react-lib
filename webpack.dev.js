@@ -3,6 +3,7 @@ const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const ReactRefreshBabel = require("react-refresh/babel");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = (env) => {
   // const isProduction = env.NODE_ENV === "production";
@@ -145,6 +146,11 @@ module.exports = (env) => {
       new Dotenv({
         // path: dotenvFilename,
         path: ".env",
+      }),
+      new ESLintPlugin({
+        extensions: ["ts", "tsx"],
+        failOnError: false,
+        // emitWarning: true,
       }),
       // https://dev.to/knitesh/using-specific-env-file-in-react-webpack-4pkj
       // new webpack.DefinePlugin({

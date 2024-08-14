@@ -56,6 +56,7 @@ module.exports = (env) => {
                 // https://github.com/webpack-contrib/css-loader#modules
                 modules: {
                   auto: /\.module\.\w+$/i,
+                  namedExport: false,
                   // localIdentName: "[name]_[local]_[hash:base64:5]",
                   getLocalIdent: (
                     context,
@@ -86,35 +87,6 @@ module.exports = (env) => {
               loader: "sass-loader",
             },
           ],
-        },
-        {
-          test: /\.styl$/,
-          exclude: /node_modules/,
-          // use: [
-          //   'style-loader',
-          //   {
-          //     loader: "css-loader",
-          //     // options: {
-          //     //   sourceMap: true,
-          //     // },
-          //   },
-          //   // {
-          //   //   loader: 'resolve-url-loader',
-          //   //   options: {
-          //   //     sourceMap: true,
-          //   //   },
-          //   // },
-          //   {
-          //     loader: "stylus-loader",
-          //     options: {
-          //       sourceMap: true,
-          //       stylusOptions: {
-          //         resolveURL: true,
-          //       },
-          //     },
-          //   },
-          // ],
-          use: ["style-loader", "css-loader", "stylus-loader"],
         },
         {
           // https://webpack.js.org/guides/asset-modules/

@@ -1,11 +1,12 @@
 const path = require("path");
-const Dotenv = require("dotenv-webpack");
-const webpack = require("webpack");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const ReactRefreshBabel = require("react-refresh/babel");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = (env) => {
+  // console.log("env: ", env);
+
   // const isProduction = env.NODE_ENV === "production";
   // const dotenvFilename = isProduction ? ".env.production" : ".env.development";
 
@@ -27,7 +28,7 @@ module.exports = (env) => {
           use: {
             loader: "babel-loader",
             options: {
-              plugins: [ReactRefreshBabel],
+              // plugins: [ReactRefreshBabel],
             },
           },
         },

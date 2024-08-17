@@ -1,9 +1,6 @@
 import React from "react";
 
-import InputText, {
-  AutoComplete,
-  InputTypes,
-} from "@src/components/atoms/InputText";
+import InputText from "@src/components/atoms/InputText";
 import { fireEvent, render, screen } from "@testing-library/react";
 // import '@testing-library/jest-dom/extend-expect';
 import userEvent from "@testing-library/user-event";

@@ -32,6 +32,7 @@ const Template = (args: InputTextProps) => {
     if (args.value !== value) {
       setValue(args.value);
     }
+    // eslint-disable-next-line
   }, [args.value]);
 
   const onChange = (evt: any) => {

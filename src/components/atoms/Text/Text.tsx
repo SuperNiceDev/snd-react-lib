@@ -2,9 +2,6 @@ import React, { FC, MouseEvent, ReactNode } from "react";
 
 import css from "./Text.module.scss";
 
-// eslint-disable-next-line
-// const log = window.debug("log: Text");
-
 export enum Tags {
   div = "div",
   span = "span",

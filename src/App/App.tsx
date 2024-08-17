@@ -11,7 +11,7 @@ import TaskList from "@src/stories/context/ContextProviderTasks/TaskList";
 const App = (): ReactElement => {
   return (
     <div className="App">
-      <div className="ewrfwef">
+      <div className="ctn">
         <Text text="my text" fff={0} />
       </div>
       <ContextProviderTasks>

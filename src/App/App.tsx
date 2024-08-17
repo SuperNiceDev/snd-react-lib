@@ -5,13 +5,15 @@ import ContextProviderTasks from "@src/context/ContextProviderTasks";
 import "@src/css/base.css";
 import "@src/css/base.scss";
 import "@src/css/reset.css";
-import AddTask from "@src/stories/context/ContextProvider/AddTask";
-import TaskList from "@src/stories/context/ContextProvider/TaskList";
+import AddTask from "@src/stories/context/ContextProviderTasks/AddTask";
+import TaskList from "@src/stories/context/ContextProviderTasks/TaskList";
 
 const App = (): ReactElement => {
   return (
     <div className="App">
-      <Text text="my text" />
+      <div className="ewrfwef">
+        <Text text="my text" fff={0} />
+      </div>
       <ContextProviderTasks>
         <h1>Day off in Kyoto</h1>
         <AddTask />

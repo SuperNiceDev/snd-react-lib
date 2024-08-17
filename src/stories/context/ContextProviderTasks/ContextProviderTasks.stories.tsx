@@ -19,6 +19,6 @@ const Template = () => {
 };
 
 export const Story1 = {
-  name: "ContextProvider",
+  name: "ContextProviderTasks",
   render: Template,
 };

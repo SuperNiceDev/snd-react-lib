@@ -2,11 +2,10 @@ import React from "react";
 
 import Text from "@src/components/atoms/Text";
 import { render, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
 
-it("renders correctly", () => {
-  const tree = renderer.create(<Text />).toJSON();
-  expect(tree).toMatchSnapshot();
+it("matches the snapshot", () => {
+  const { asFragment } = render(<Text>My text</Text>);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test("contains correct placeholder", () => {

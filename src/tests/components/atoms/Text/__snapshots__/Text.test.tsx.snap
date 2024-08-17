@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<p
-  className="root"
-  onClick={[Function]}
-/>
+exports[`matches the snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="root"
+  >
+    My text
+  </p>
+</DocumentFragment>
 `;

@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, ReactNode } from "react";
+import React, { MouseEvent, ReactNode } from "react";
 
 import css from "./Text.module.scss";
 
@@ -15,7 +15,7 @@ export enum Tags {
   h6 = "h6",
 }
 
-export interface IText {
+export type TextProps = {
   className?: string;
   id?: string;
   htmlFor?: string;
@@ -25,9 +25,9 @@ export interface IText {
   style?: React.CSSProperties;
   onClick?: (evt: MouseEvent) => void;
   children?: ReactNode;
-}
+};
 
-const Text: FC<IText> = ({
+const Text = ({
   className,
   id,
   htmlFor,
@@ -36,7 +36,7 @@ const Text: FC<IText> = ({
   style,
   onClick = () => null,
   children,
-}) => {
+}: TextProps) => {
   // console.log("text: ", text);
 
   return (

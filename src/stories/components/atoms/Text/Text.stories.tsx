@@ -1,9 +1,12 @@
 import React from "react";
 
-import Text, { IText, Tags } from "@src/components/atoms/Text";
-import type { Meta } from "@storybook/react";
+// import Text, { Tags } from "@src/components/atoms/Text";
+import Text, { Tags, TextProps } from "@src/components/atoms/Text";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import css from "./Text.stories.module.scss";
+
+// type TextProps = typeof Text;
 
 export default {
   component: Text,
@@ -12,9 +15,7 @@ export default {
       name: "Tag: ",
       description: "",
       defaultValue: Tags.p,
-      control: {
-        type: "inline-radio",
-      },
+      control: "inline-radio",
       options: [
         Tags.div,
         Tags.span,
@@ -29,9 +30,11 @@ export default {
       ],
     },
   },
-} as Meta;
+} as Meta<TextProps>;
 
-const Template = (args: IText) => {
+type Story = StoryObj<TextProps>;
+
+const Template = (args: Story) => {
   return (
     <div className={css.root}>
       <Text {...args} />
@@ -41,7 +44,7 @@ const Template = (args: IText) => {
 
 export const Story1 = {
   name: "Text",
-  render: (args: IText) => <Template {...args} />,
+  render: (args: Story) => <Template {...args} />,
   args: {
     className: "myText",
     Tag: Tags.p,

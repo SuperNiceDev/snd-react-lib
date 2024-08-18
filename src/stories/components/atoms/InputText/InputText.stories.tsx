@@ -1,12 +1,15 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import InputText, {
   InputTextProps,
   InputTypes,
 } from "@src/components/atoms/InputText";
 import { action } from "@storybook/addon-actions";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import css from "./InputText.stories.module.scss";
+
+// type InputTextProps = typeof InputText;
 
 // const log = window.debug("log: InputText.stories");
 
@@ -23,7 +26,9 @@ export default {
       options: [InputTypes.text, InputTypes.password, InputTypes.number],
     },
   },
-};
+} as Meta<InputTextProps>;
+
+type Story = StoryObj<InputTextProps>;
 
 const Template = (args: InputTextProps) => {
   const [value, setValue] = useState(args.value);
@@ -45,12 +50,7 @@ const Template = (args: InputTextProps) => {
 
   return (
     <div className={css.root}>
-      <InputText
-        //
-        {...args}
-        value={value}
-        onChange={onChange}
-      />
+      <InputText {...args} value={value} onChange={onChange} />
       <div className={css.renderTest}>Render Test 1</div>
       <div className={css.renderTest}>Render Test 2</div>
       <div className={css.renderTest}>Render Test 3</div>
@@ -73,7 +73,7 @@ const sharedArgs = {
 
 export const StoryInputText = {
   name: "InputText",
-  render: (args: InputTextProps): ReactElement => <Template {...args} />,
+  render: (args: Story) => <Template {...args} />,
   args: {
     ...sharedArgs,
     className: css.myInput,
@@ -85,7 +85,7 @@ export const StoryInputText = {
 
 export const StoryInputTextMultiline = {
   name: "InputText multiline",
-  render: (args: InputTextProps): ReactElement => <Template {...args} />,
+  render: (args: InputTextProps) => <Template {...args} />,
   args: {
     ...sharedArgs,
     className: `${css.myInput} ${css.myInputMultiline}`,

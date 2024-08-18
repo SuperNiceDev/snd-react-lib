@@ -2,7 +2,8 @@ import type { StorybookConfig } from "@storybook/react-webpack5";
 import path, { dirname, join } from "path";
 
 // const webpackDevConfFunc = require("../webpack.dev.js");
-const webpackDevConfFunc = require("../webpack.dev.js");
+import webpackDevConfFunc from "../webpack.dev.js";
+
 const webpackDevConf = webpackDevConfFunc();
 
 const config: StorybookConfig = {
@@ -21,7 +22,6 @@ const config: StorybookConfig = {
     const resolve = config.resolve;
     if (resolve?.alias) {
       resolve.alias["@src"] = path.resolve(__dirname, "../src");
-      resolve.alias["js-dom-utils"] = path.resolve(__dirname, "../lib/js-dom-utils/src");
     }
     const newConfig = {
       ...config,

@@ -15,7 +15,6 @@ module.exports = (env) => {
     resolve: {
       alias: {
         "@src": path.resolve(__dirname, "src"),
-        "js-dom-utils": path.resolve(__dirname, "lib/js-dom-utils/src"),
         // '@assets': path.resolve(__dirname, 'src/assets/'),
       },
       extensions: [".ts", ".tsx", ".js"],
@@ -121,9 +120,10 @@ module.exports = (env) => {
         path: ".env",
       }),
       new ESLintPlugin({
-        extensions: ["ts", "tsx"],
+        extensions: ["ts", "tsx", "js", "mjs"],
         failOnError: false,
-        // emitWarning: true,
+        // overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"), // Use the new ESLint config
+        emitWarning: true,
       }),
       // https://dev.to/knitesh/using-specific-env-file-in-react-webpack-4pkj
       // new webpack.DefinePlugin({

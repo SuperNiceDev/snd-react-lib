@@ -16,12 +16,12 @@ const compat = new FlatCompat({
 });
 
 export default [
-  {
-    ignores: [
-      "src/packages/snd-react-lib/public/",
-      "src/packages/snd-react-lib/build/",
-    ],
-  },
+  // {
+  //   ignores: [
+  //     "src/packages/snd-react-lib/public/",
+  //     "src/packages/snd-react-lib/build/",
+  //   ],
+  // },
   ...fixupConfigRules(
     compat.extends(
       "eslint:recommended",

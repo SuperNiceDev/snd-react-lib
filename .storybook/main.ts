@@ -15,6 +15,27 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
+    {
+      name: "@storybook/addon-styling-webpack",
+      options: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: [
+              "style-loader",
+              {
+                loader: "css-loader",
+                options: { importLoaders: 1 },
+              },
+              {
+                loader: "postcss-loader",
+                options: { implementation: require.resolve("postcss") },
+              },
+            ],
+          },
+        ],
+      },
+    },
   ],
   webpackFinal: (config) => {
     // webpackFinal: async (config, { configType }) => {

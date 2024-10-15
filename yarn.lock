@@ -1992,6 +1992,13 @@
     "@storybook/global" "^5.0.0"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-styling-webpack@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@storybook/addon-styling-webpack/-/addon-styling-webpack-1.0.0.tgz#a4d0d449b8e76135565bdc4745f9d0420edd2420"
+  integrity sha512-jo1kzn7pi+NA+LZxrWoRvW6w7dXIKY/BjTG80XX2uU92lIKT+X1k/9vYk/0KPVK3Bsf4tO6ToAuqIRyOk7MHtg==
+  dependencies:
+    "@storybook/node-logger" "^8.0.0-alpha.10"
+
 "@storybook/addon-toolbars@8.3.5":
   version "8.3.5"
   resolved "https://registry.npmjs.org/@storybook/addon-toolbars/-/addon-toolbars-8.3.5.tgz#7328fed0f4a24c6828ba23e06b9cddd0d3e00e2b"
@@ -2188,6 +2195,11 @@
     tsconfig-paths-webpack-plugin "^4.0.1"
   optionalDependencies:
     sharp "^0.33.3"
+
+"@storybook/node-logger@^8.0.0-alpha.10":
+  version "8.3.5"
+  resolved "https://registry.npmjs.org/@storybook/node-logger/-/node-logger-8.3.5.tgz#5dafa79765eb2e1224717c84a1f681ab1c670dbf"
+  integrity sha512-k49xhJy2jmfJbi2HrbrYlFDYRpwRr21Yp9OMa3lnFtVuuuhbYSIhx26wyicKf+wSk4UFl29UDlSFETIcu32ASg==
 
 "@storybook/preset-react-webpack@8.3.5":
   version "8.3.5"

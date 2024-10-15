@@ -21,6 +21,7 @@ module.exports = (env) => {
     },
     module: {
       rules: [
+        // ------ [0]
         {
           test: /\.(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
@@ -31,10 +32,12 @@ module.exports = (env) => {
             },
           },
         },
+        // ------ [1]
         {
           test: /\.css$/,
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
+        // ------ [2]
         {
           // https://webpack.js.org/loaders/css-loader/#pure-css-css-modules-and-postcss
           // For pure CSS - /\.css$/i,
@@ -82,6 +85,7 @@ module.exports = (env) => {
             //   options: { plugins: () => [postcssPresetEnv({ stage: 0 })] },
             // },
             // Can be `less-loader`
+            // ------ [3]
             {
               loader: "sass-loader",
             },

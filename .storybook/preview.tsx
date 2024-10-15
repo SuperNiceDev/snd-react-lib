@@ -57,7 +57,7 @@ const preview: Preview = {
     },
   },
   // decorators: [muiDecorator],
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
 };
 
 export default preview;

@@ -1,17 +1,16 @@
-import React from "react";
-
-import {
-  CssBaseline,
-  StyledEngineProvider,
-  ThemeProvider,
-} from "@mui/material";
+// import React from "react";
+// import {
+//   CssBaseline,
+//   StyledEngineProvider,
+//   ThemeProvider,
+// } from "@mui/material";
 import "@src/css/base.css";
 import "@src/css/reset.css";
 import "@src/css/tailwind.css";
-import { makeDecorator } from "@storybook/preview-api";
+// import { makeDecorator } from "@storybook/preview-api";
 import { Preview } from "@storybook/react";
 
-import theme from "../src/context/MuiProvider/theme.ts";
+// import theme from "../src/context/MuiProvider/theme.ts";
 
 // https://storybook.js.org/docs/react/essentials/toolbars-and-globals#gatsby-focus-wrapper
 

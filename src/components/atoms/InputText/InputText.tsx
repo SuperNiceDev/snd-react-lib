@@ -73,7 +73,7 @@ const InputText = ({
   const Element = !multiline ? "input" : "textarea";
   const clnDisabled = disabled ? ` ${css.disabled} disabled` : "";
   const clnAdd = className ? ` ${className}` : "";
-  const cln = `${css.root} InputText${clnDisabled}${clnAdd}`;
+  const cln = `${css.root} InputText${clnDisabled}${clnAdd} XXXXX`;
 
   return (
     <Element

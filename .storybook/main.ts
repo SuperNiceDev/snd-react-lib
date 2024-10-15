@@ -15,6 +15,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
+    getAbsolutePath("@storybook/addon-styling-webpack"),
   ],
   webpackFinal: (config) => {
     // webpackFinal: async (config, { configType }) => {

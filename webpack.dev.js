@@ -1,5 +1,5 @@
 const path = require("path");
-const ReactRefreshBabel = require("react-refresh/babel");
+// const ReactRefreshBabel = require("react-refresh/babel");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");

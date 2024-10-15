@@ -1,16 +1,11 @@
-// import React from "react";
-// import {
-//   CssBaseline,
-//   StyledEngineProvider,
-//   ThemeProvider,
-// } from "@mui/material";
+import React from "react";
+
+import MuiProvider from "@src/context/MuiProvider";
 import "@src/css/base.css";
 import "@src/css/reset.css";
 import "@src/css/tailwind.css";
-// import { makeDecorator } from "@storybook/preview-api";
+import { makeDecorator } from "@storybook/preview-api";
 import { Preview } from "@storybook/react";
-
-// import theme from "../src/context/MuiProvider/theme.ts";
 
 // https://storybook.js.org/docs/react/essentials/toolbars-and-globals#gatsby-focus-wrapper
 
@@ -30,21 +25,14 @@ export const globalTypes = {
   },
 };
 
-// export const muiDecorator = makeDecorator({
-//   name: "MuiDecorator",
-//   parameterName: "MuiDecoratorParameter",
-//   // skipIfNoParametersOrOptions: true,
-//   wrapper: (getStory: any, context, { parameters }) => {
-//     return (
-//       // <StyledEngineProvider injectFirst>
-//       <ThemeProvider theme={theme}>
-//         <CssBaseline />
-//         {getStory(context)}
-//       </ThemeProvider>
-//       // </StyledEngineProvider>
-//     );
-//   },
-// });
+export const muiDecorator = makeDecorator({
+  name: "MuiDecorator",
+  parameterName: "MuiDecoratorParameter",
+  // skipIfNoParametersOrOptions: true,
+  wrapper: (getStory: any, context, { parameters }) => {
+    return <MuiProvider>{getStory(context)}</MuiProvider>;
+  },
+});
 
 const preview: Preview = {
   parameters: {
@@ -55,7 +43,7 @@ const preview: Preview = {
       },
     },
   },
-  // decorators: [muiDecorator],
+  decorators: [muiDecorator],
   // tags: ["autodocs"],
 };
 

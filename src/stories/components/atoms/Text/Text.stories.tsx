@@ -48,6 +48,6 @@ export const Story1 = {
   args: {
     className: "myText",
     Tag: Tags.p,
-    text: `my text`,
+    text: "my text",
   },
 };

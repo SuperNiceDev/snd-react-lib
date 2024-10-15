@@ -1,11 +1,13 @@
 import React from "react";
 
-// import { Typography } from "@mui/material";
-// import Button from "@mui/material/Button";
-// import Stack from "@mui/material/Stack";
+import { Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import MuiProvider from "@src/context/MuiProvider";
+
 import css from "./MuiTest.module.scss";
 
-const MuiTest = () => {
+export function MuiTest() {
   return (
     <div className={`${css.root}`}>
       {`<MuiTest>`}
@@ -26,7 +28,7 @@ const MuiTest = () => {
           {`Tailwind: <h1 />`}
         </h1>
 
-        {/* <Typography
+        <Typography
           className="tw-m-3 tw-p-3 tw-text-3xl tw-font-bold tw-text-lime-700"
           variant="h2"
           gutterBottom
@@ -44,12 +46,18 @@ const MuiTest = () => {
           <Button className="tw-text-lime-700" variant="text">
             variant Text
           </Button>
-        </Stack> */}
+        </Stack>
       </main>
       <br />
       {`</MuiTest>`}
     </div>
   );
-};
+}
 
-export default MuiTest;
+export default function MuiTestWithMuiProvider() {
+  return (
+    <MuiProvider>
+      <MuiTest />
+    </MuiProvider>
+  );
+}

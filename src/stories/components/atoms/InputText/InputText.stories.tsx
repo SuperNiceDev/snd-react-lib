@@ -28,7 +28,7 @@ export default {
   },
 } as Meta<InputTextProps>;
 
-type Story = StoryObj<InputTextProps>;
+type StoryProps = StoryObj<InputTextProps>;
 
 const Template = (args: InputTextProps) => {
   const [value, setValue] = useState(args.value);
@@ -73,7 +73,7 @@ const sharedArgs = {
 
 export const StoryInputText = {
   name: "InputText",
-  render: (args: Story) => <Template {...args} />,
+  render: (args: StoryProps) => <Template {...args} />,
   args: {
     ...sharedArgs,
     className: css.myInput,

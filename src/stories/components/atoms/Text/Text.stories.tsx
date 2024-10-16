@@ -32,9 +32,9 @@ export default {
   },
 } as Meta<TextProps>;
 
-type Story = StoryObj<TextProps>;
+type StoryProps = StoryObj<TextProps>;
 
-const Template = (args: Story) => {
+const Template = (args: StoryProps) => {
   return (
     <div className={css.root}>
       <Text {...args} />
@@ -44,7 +44,7 @@ const Template = (args: Story) => {
 
 export const Story1 = {
   name: "Text",
-  render: (args: Story) => <Template {...args} />,
+  render: (args: StoryProps) => <Template {...args} />,
   args: {
     className: "myText",
     Tag: Tags.p,

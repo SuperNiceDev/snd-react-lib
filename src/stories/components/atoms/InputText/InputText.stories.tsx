@@ -15,7 +15,6 @@ import css from "./InputText.stories.module.scss";
 
 export default {
   component: InputText,
-  // argTypes: typeof InputText,
   argTypes: {
     type: {
       name: "InputTypes",
@@ -27,8 +26,6 @@ export default {
     },
   },
 } as Meta<InputTextProps>;
-
-type StoryProps = StoryObj<InputTextProps>;
 
 const Template = (args: InputTextProps) => {
   const [value, setValue] = useState(args.value);
@@ -58,6 +55,8 @@ const Template = (args: InputTextProps) => {
   );
 };
 
+type Story = StoryObj<InputTextProps>;
+
 const sharedArgs = {
   name: "my_name",
   type: InputTypes.text,
@@ -73,7 +72,7 @@ const sharedArgs = {
 
 export const StoryInputText = {
   name: "InputText",
-  render: (args: StoryProps) => <Template {...args} />,
+  render: (args: Story) => <Template {...args} />,
   args: {
     ...sharedArgs,
     className: css.myInput,

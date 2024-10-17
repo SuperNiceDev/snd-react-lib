@@ -8,7 +8,7 @@ import css from "./Text.stories.module.scss";
 
 // type TextProps = typeof Text;
 
-export default {
+const meta: Meta<TextProps> = {
   component: Text,
   argTypes: {
     Tag: {
@@ -30,11 +30,10 @@ export default {
       ],
     },
   },
-} as Meta<TextProps>;
+};
+export default meta;
 
-type StoryProps = StoryObj<TextProps>;
-
-const Template = (args: StoryProps) => {
+const Template = (args: TextProps) => {
   return (
     <div className={css.root}>
       <Text {...args} />
@@ -42,9 +41,11 @@ const Template = (args: StoryProps) => {
   );
 };
 
-export const Story1 = {
+type Story = StoryObj<TextProps>;
+
+export const Story1: Story = {
   name: "Text",
-  render: (args: StoryProps) => <Template {...args} />,
+  render: (args: TextProps) => <Template {...args} />,
   args: {
     className: "myText",
     Tag: Tags.p,

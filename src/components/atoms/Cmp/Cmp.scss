@@ -1,0 +1,33 @@
+// .Cmp {
+//   $color: red;
+//   color: $color;
+//   user-select: none;
+
+//   &.primary {
+//     font-weight: bold;
+//   }
+
+//   .ctn {
+//     display: inline-block;
+//     padding: 12px 18px;
+//     border: 1px solid $color;
+
+//     background-image: url("./assets/rectangle.svg");
+//     // background-image: url("./assets/circle.png");
+
+//     // background-image: url("/src/css/assets/rectangle.svg");
+//     // background-image: url("/src/css/assets/circle.png");
+
+//     // background-size: 100% auto;
+//     background-size: auto 100%;
+
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//   }
+
+//   &.primary {
+//     .ctn {
+//       border: 2px solid $color;
+//     }
+//   }
+// }

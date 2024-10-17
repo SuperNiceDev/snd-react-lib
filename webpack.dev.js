@@ -21,23 +21,23 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        // ------ [0]
+        // ------ rules[0]
         {
           test: /\.(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
           use: {
             loader: "babel-loader",
-            options: {
-              // plugins: [ReactRefreshBabel],
-            },
+            // options: {
+            //   plugins: [ReactRefreshBabel],
+            // },
           },
         },
-        // ------ [1]
+        // ------ rules[1]
         {
           test: /\.css$/,
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
-        // ------ [2]
+        // ------ rules[2]
         {
           // https://webpack.js.org/loaders/css-loader/#pure-css-css-modules-and-postcss
           // For pure CSS - /\.css$/i,
@@ -85,12 +85,12 @@ module.exports = (env) => {
             //   options: { plugins: () => [postcssPresetEnv({ stage: 0 })] },
             // },
             // Can be `less-loader`
-            // ------ [3]
             {
               loader: "sass-loader",
             },
           ],
         },
+        // ------ rules[3]
         {
           // https://webpack.js.org/guides/asset-modules/
           test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,

@@ -7,8 +7,6 @@ import "@src/css/tailwind.css";
 import { makeDecorator } from "@storybook/preview-api";
 import { Preview } from "@storybook/react";
 
-// https://storybook.js.org/docs/react/essentials/toolbars-and-globals#gatsby-focus-wrapper
-
 export const globalTypes = {
   locale: {
     name: "Locale",

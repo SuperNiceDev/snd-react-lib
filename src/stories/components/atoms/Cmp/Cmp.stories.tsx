@@ -9,7 +9,7 @@ import css from "./Cmp.stories.module.scss";
 
 // eslint-disable-next-line
 // @ts-ignore
-const log = window.debug("log: Cmp.stories");
+// const log = window.debug("log: Cmp.stories");
 
 interface IStory extends ICmp {
   classNameStory: string;

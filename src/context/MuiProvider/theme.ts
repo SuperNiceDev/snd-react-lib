@@ -1,22 +1,24 @@
 "use client";
 
 import { createTheme } from "@mui/material/styles";
-import { Roboto } from "next/font/google";
+// import { Roboto } from "@next/font/google";
 import resolveConfig from "tailwindcss/resolveConfig";
 
 import tailwindConfig from "../../../tailwind.config";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const roboto = Roboto({
+//   weight: ["300", "400", "500", "700"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 const fullTailwindConfig = resolveConfig(tailwindConfig);
 
 const theme = createTheme({
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    // fontFamily: roboto.style.fontFamily,
+    fontFamily: "Roboto, Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
   },
   palette: {
     mode: "dark",

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { StyledEngineProvider } from "@mui/material";
 import Cmp from "@src/components/atoms/Cmp";
 import InputText from "@src/components/atoms/InputText";
 import Text from "@src/components/atoms/Text";
@@ -43,9 +44,11 @@ const App = () => {
       </div>
       <div className="line">{`// -------------------------`}</div>
       <div className="testMuiTest">
-        <MuiProvider>
-          <MuiTest />
-        </MuiProvider>
+        <StyledEngineProvider injectFirst>
+          <MuiProvider>
+            <MuiTest />
+          </MuiProvider>
+        </StyledEngineProvider>
       </div>
     </div>
   );

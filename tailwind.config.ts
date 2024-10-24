@@ -22,7 +22,7 @@ const config: Config = {
         // },
       },
       fontFamily: {
-        display: ["var(--fontRoboto)", "serif"],
+        // display: ["var(--fontRoboto)", "serif"],
       },
       fontSize: {
         h1: "1rem",

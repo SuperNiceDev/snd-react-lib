@@ -1,5 +1,6 @@
 import React from "react";
 
+import { StyledEngineProvider } from "@mui/material";
 import MuiProvider from "@src/context/MuiProvider";
 import "@src/css/base.css";
 import "@src/css/reset.css";
@@ -28,7 +29,11 @@ export const muiDecorator = makeDecorator({
   parameterName: "MuiDecoratorParameter",
   // skipIfNoParametersOrOptions: true,
   wrapper: (getStory: any, context, { parameters }) => {
-    return <MuiProvider>{getStory(context)}</MuiProvider>;
+    return (
+      <StyledEngineProvider injectFirst>
+        <MuiProvider>{getStory(context)}</MuiProvider>
+      </StyledEngineProvider>
+    );
   },
 });
 

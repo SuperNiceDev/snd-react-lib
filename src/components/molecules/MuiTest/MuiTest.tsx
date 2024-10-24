@@ -3,11 +3,10 @@ import React from "react";
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import MuiProvider from "@src/context/MuiProvider";
 
 import css from "./MuiTest.module.scss";
 
-export function MuiTest() {
+export default function MuiTest() {
   return (
     <div className={`${css.root}`}>
       {`<MuiTest>`}
@@ -51,13 +50,5 @@ export function MuiTest() {
       <br />
       {`</MuiTest>`}
     </div>
-  );
-}
-
-export default function MuiTestWithMuiProvider() {
-  return (
-    <MuiProvider>
-      <MuiTest />
-    </MuiProvider>
   );
 }

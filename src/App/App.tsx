@@ -5,6 +5,7 @@ import InputText from "@src/components/atoms/InputText";
 import Text from "@src/components/atoms/Text";
 import MuiTest from "@src/components/molecules/MuiTest";
 import ContextProviderTasks from "@src/context/ContextProviderTasks";
+import MuiProvider from "@src/context/MuiProvider";
 import "@src/css/base.css";
 import "@src/css/base.scss";
 import "@src/css/reset.css";
@@ -42,7 +43,9 @@ const App = () => {
       </div>
       <div className="line">{`// -------------------------`}</div>
       <div className="testMuiTest">
-        <MuiTest />
+        <MuiProvider>
+          <MuiTest />
+        </MuiProvider>
       </div>
     </div>
   );

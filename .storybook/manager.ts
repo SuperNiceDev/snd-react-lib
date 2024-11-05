@@ -1,7 +1,5 @@
 // https://storybook.js.org/docs/react/configure/features-and-behavior
-  
-  
-import { addons } from '@storybook/manager-api';
+import { addons } from "@storybook/manager-api";
 
 import supernice_io from "./themes/supernice_io";
 
@@ -14,7 +12,7 @@ addons.setConfig({
   // showToolbar: true,
   theme: supernice_io,
   // selectedPanel: undefined,
-  initialActive: 'sidebar',
+  initialActive: "sidebar",
   // sidebar: {
   //   showRoots: false,
   //   collapsedRoots: ['other'],

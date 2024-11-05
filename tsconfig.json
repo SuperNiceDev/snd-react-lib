@@ -1,20 +1,46 @@
+// https://www.totaltypescript.com/tsconfig-cheat-sheet
+
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    /* --- Base Options: --- */
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
     "resolveJsonModule": true,
+    "moduleDetection": "force",
     "isolatedModules": true,
+    // "verbatimModuleSyntax": true,
+
+    /* --- Strictness --- */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* --- If transpiling with TypeScript: --- */
+    // "module": "NodeNext",
+    // "outDir": "dist",
+    // "sourceMap": true,
+
+    /* --- AND if you're building for a library: --- */
+    // "declaration": true,
+
+    /* --- AND if you're building for a library in a monorepo: --- */
+    // "composite": true,
+    // "declarationMap": true,
+
+    /* --- If NOT transpiling with TypeScript: --- */
+    "module": "preserve",
+    "noEmit": true,
+
+    /* --- If your code runs in the DOM: --- */
+    "lib": ["es2022", "dom", "dom.iterable"],
+
+    /* --- If your code doesn't run in the DOM: --- */
+    // "lib": ["es2022"]
+
+    // --- custom
     "jsx": "react",
-    "incremental": true,
-    
-    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
@@ -22,6 +48,8 @@
     "types": ["@testing-library/jest-dom"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
+
+  // --- custom
   "exclude": [
     "build",
     "node_modules",

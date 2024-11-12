@@ -41,9 +41,9 @@ const Template = (args: TextProps) => {
   );
 };
 
-type Story = StoryObj<TextProps>;
+type StoryType = StoryObj<TextProps>;
 
-export const Story1: Story = {
+export const Story1: StoryType = {
   name: "Text",
   render: (args: TextProps) => <Template {...args} />,
   args: {

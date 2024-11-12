@@ -55,7 +55,7 @@ const Template = (args: InputTextProps) => {
   );
 };
 
-type Story = StoryObj<InputTextProps>;
+type StoryType = StoryObj<InputTextProps>;
 
 const sharedArgs = {
   name: "my_name",
@@ -72,7 +72,7 @@ const sharedArgs = {
 
 export const StoryInputText = {
   name: "InputText",
-  render: (args: Story) => <Template {...args} />,
+  render: (args: StoryType) => <Template {...args} />,
   args: {
     ...sharedArgs,
     className: css.myInput,

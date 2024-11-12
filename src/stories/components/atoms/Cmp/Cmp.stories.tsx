@@ -18,7 +18,7 @@ interface IStory extends ICmp {
 
 // --------------------
 
-const meta: Meta<IStory> = {
+export default {
   // title: `${componentsPath}/components/atoms/Cmp`,
   component: Cmp,
   argTypes: {
@@ -40,9 +40,7 @@ const meta: Meta<IStory> = {
   },
   // parameters: {
   //   layout: "fullscreen",
-};
-
-export default meta;
+} as Meta<IStory>;
 
 // https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety
 
@@ -126,7 +124,7 @@ const Template = ({ forceRender, classNameStory, ...props }: IStory) => {
 export const Story1 = {
   name: "Cmp",
   render: (args: IStory) => <Template {...args} />,
-  // render: (args: IStory): any => <div>Test {args.toString()}</div>,
+  // render: (args: IStory) => <div>Test {args.toString()}</div>,
   args: {
     className: "myCmp",
     id: "Cmp-ID",

@@ -11,7 +11,7 @@ export default function MuiTest() {
     <div className={`${css.root}`}>
       {`<MuiTest>`}
 
-      <main className={css.main}>
+      <main className={`${css.main} tw-px-4`}>
         {/* <TextExt className="tw-text-lime-500" text="MyTextExt" /> */}
 
         {/* <Text className="tw-text-lime-500" text="MyText" /> */}

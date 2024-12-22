@@ -14,15 +14,9 @@ import "./Cmp.scss";
 
 // const css = { root: "", ctn: "", primary: "" };
 
-// ts - comiler:
 // eslint-disable-next-line
 // @ts-ignore
 
-// es - linter:
-// eslint-disable-next-line
-
-// eslint-disable-next-line
-// @ts-ignore
 // const log = window.debug("log: Cmp");
 
 export enum Variant {

@@ -28,6 +28,7 @@ export default {
 } as Meta<InputTextProps>;
 
 const Template = (args: InputTextProps) => {
+  const { className, multiline } = args;
   const [value, setValue] = useState(args.value);
 
   useEffect(() => {
@@ -45,9 +46,15 @@ const Template = (args: InputTextProps) => {
 
   // log("value: ", value);
 
+  const cln = multiline
+    ? `${css.myInput} ${css.myInputMultiline} ${className}`
+    : `${css.myInput} ${className}`;
+
   return (
-    <div className={css.root}>
-      <InputText {...args} value={value} onChange={onChange} />
+    // <div className={`${css.root}`}>
+    <div className={`${css.root} tw-text-red-500 tw-font-bold tw-text-xs`}>
+      <span>InputText: </span>
+      <InputText {...args} className={cln} value={value} onChange={onChange} />
       <div className={css.renderTest}>Render Test 1</div>
       <div className={css.renderTest}>Render Test 2</div>
       <div className={css.renderTest}>Render Test 3</div>
@@ -75,7 +82,8 @@ export const StoryInputText = {
   render: (args: StoryType) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className: css.myInput,
+    className:
+      "tw-text-gray-500 tw-border tw-border-gray-500 tw-text-sm tw-py-1 tw-px-2",
   },
   parameters: {
     layout: "fullscreen",
@@ -87,7 +95,8 @@ export const StoryInputTextMultiline = {
   render: (args: InputTextProps) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className: `${css.myInput} ${css.myInputMultiline}`,
+    className:
+      "tw-text-gray-500 tw-border tw-border-gray-500 tw-text-sm tw-py-1 tw-px-2",
     multiline: true,
     value: `Lorem Ispum,
 

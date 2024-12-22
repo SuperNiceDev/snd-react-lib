@@ -45,6 +45,13 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    backgrounds: {
+      values: [
+        { name: "Dark", value: "#333" },
+        { name: "Light", value: "#FFF" },
+      ],
+      default: "Light",
+    },
   },
   decorators: [muiDecorator],
   // tags: ["autodocs"],

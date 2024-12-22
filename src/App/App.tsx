@@ -23,9 +23,12 @@ const App = () => {
         {`</Text>`}
       </div>
       <div className="line">{`// -------------------------`}</div>
-      <div className="testText">
+      <div className="testInputText tw-font-bold tw-text-sm tw-text-gray-500">
         {`<InputText>`}
-        <InputText value="my value" />
+        <InputText
+          className="tw-py-1 tw-px-2 tw-font-bold tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
+          value="my value"
+        />
         {`</InputText>`}
       </div>
       <div className="line">{`// -------------------------`}</div>

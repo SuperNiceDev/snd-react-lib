@@ -2,11 +2,13 @@
   padding: 20px;
 
   .myInput {
-    padding: 6px;
-    border: 1px solid black;
+    position: relative;
+    // padding: 6px;
+    // border: 1px solid black;
     
     &.myInputMultiline {
-      height: 120px;
+      position: relative;
+      // height: 120px;
     }
   }
 

@@ -56,7 +56,7 @@ const InputText = ({
   autoComplete,
   ariaLabel,
   onFocus,
-  onChange,
+  onChange = () => null,
   onBlur,
   ...rest
 }: InputTextProps): ReactElement => {

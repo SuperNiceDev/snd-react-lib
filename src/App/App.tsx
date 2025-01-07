@@ -5,14 +5,14 @@ import Cmp from "@src/components/atoms/Cmp";
 import InputText from "@src/components/atoms/InputText";
 import Text from "@src/components/atoms/Text";
 import MuiTest from "@src/components/molecules/MuiTest";
-import ContextProviderTasks from "@src/context/ContextProviderTasks";
+import { ContextTasksProvider } from "@src/context/ContextTasks";
 import MuiProvider from "@src/context/MuiProvider";
 import "@src/css/base.css";
 import "@src/css/base.scss";
 import "@src/css/reset.css";
 import "@src/css/tailwind.css";
-import AddTask from "@src/stories/context/ContextProviderTasks/AddTask";
-import TaskList from "@src/stories/context/ContextProviderTasks/TaskList";
+import AddTask from "@src/stories/context/ContextTasks/AddTask";
+import TaskList from "@src/stories/context/ContextTasks/TaskList";
 
 const App = () => {
   return (
@@ -38,11 +38,11 @@ const App = () => {
       <div className="line">{`// -------------------------`}</div>
       <div className="testContextProviderTasks">
         {`<ContextProviderTasks>`}
-        <ContextProviderTasks>
+        <ContextTasksProvider>
           <h1>Day off in Kyoto</h1>
           <AddTask />
           <TaskList />
-        </ContextProviderTasks>
+        </ContextTasksProvider>
         {`<ContextProviderTasks>`}
       </div>
       <div className="line">{`// -------------------------`}</div>

@@ -11,7 +11,11 @@ export const useContext = (): any => useContextLib(Context);
 const ContextDispatch = createContext<any>(null);
 export const useContextDispatch = (): any => useContextLib(ContextDispatch);
 
-const ContextProvider = ({ children, reducer, initialData }: any) => {
+export const ContextBaseProvider = ({
+  reducer,
+  initialData,
+  children,
+}: any) => {
   const [state, dispatch] = useReducer(reducer, initialData);
 
   return (
@@ -22,5 +26,3 @@ const ContextProvider = ({ children, reducer, initialData }: any) => {
     </Context.Provider>
   );
 };
-
-export default ContextProvider;

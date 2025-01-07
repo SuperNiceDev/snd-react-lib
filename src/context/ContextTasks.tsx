@@ -1,18 +1,14 @@
 import React from "react";
 
-import ContextProvider from "../ContextProvider/ContextProvider";
+import { ContextBaseProvider } from "@src/context/ContextBase";
 
-const ContextProviderTasks = ({ children }: any) => {
-  return (
-    <ContextProvider reducer={tasksReducer} initialData={initialTasks}>
-      {children}
-    </ContextProvider>
-  );
-};
+const initialData = [
+  { id: 0, text: "Philosopher´s Path", done: true },
+  { id: 1, text: "Visit the temple", done: false },
+  { id: 2, text: "Drink matcha", done: false },
+];
 
-export default ContextProviderTasks;
-
-const tasksReducer = (tasks: any, action: any) => {
+const reducer = (tasks: any, action: any) => {
   switch (action.type) {
     case "added": {
       return [
@@ -42,8 +38,10 @@ const tasksReducer = (tasks: any, action: any) => {
   }
 };
 
-const initialTasks = [
-  { id: 0, text: "Philosopher´s Path", done: true },
-  { id: 1, text: "Visit the temple", done: false },
-  { id: 2, text: "Drink matcha", done: false },
-];
+export const ContextTasksProvider = ({ children }: any) => {
+  return (
+    <ContextBaseProvider initialData={initialData} reducer={reducer}>
+      {children}
+    </ContextBaseProvider>
+  );
+};

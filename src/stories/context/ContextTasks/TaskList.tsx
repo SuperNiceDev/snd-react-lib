@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  useContext,
-  useContextDispatch,
-} from "../../../context/ContextProvider";
+import { useContext, useContextDispatch } from "../../../context/ContextBase";
 
 export default function TaskList() {
   const tasks = useContext();
@@ -41,14 +38,24 @@ function Task({ task }: any) {
             });
           }}
         />
-        <button onClick={() => setIsEditing(false)}>Save</button>
+        <button
+          className="tw-border tw-border-white tw-rounded tw-px-2"
+          onClick={() => setIsEditing(false)}
+        >
+          Save
+        </button>
       </>
     );
   } else {
     taskContent = (
       <>
         {task.text}
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <button
+          className="tw-border tw-border-white tw-rounded tw-px-2"
+          onClick={() => setIsEditing(true)}
+        >
+          Edit
+        </button>
       </>
     );
   }
@@ -70,6 +77,7 @@ function Task({ task }: any) {
       />
       {taskContent}
       <button
+        className="tw-border tw-border-white tw-rounded tw-px-2"
         onClick={() => {
           dispatch({
             type: "deleted",

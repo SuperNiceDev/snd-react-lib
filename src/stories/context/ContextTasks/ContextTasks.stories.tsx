@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContextProviderTasks from "@src/context/ContextProviderTasks";
+import { ContextTasksProvider } from "@src/context/ContextTasks";
 import type { Meta } from "@storybook/react";
 
 import AddTask from "./AddTask";
@@ -10,15 +10,14 @@ export default {} as Meta;
 
 const Template = () => {
   return (
-    <ContextProviderTasks>
-      <h1>Day off in Kyoto</h1>
+    <ContextTasksProvider>
       <AddTask />
       <TaskList />
-    </ContextProviderTasks>
+    </ContextTasksProvider>
   );
 };
 
 export const Story1 = {
-  name: "ContextProviderTasks",
+  name: "ContextTasks",
   render: Template,
 };

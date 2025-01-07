@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useContextDispatch } from "../../../context/ContextProvider";
+import { useContextDispatch } from "../../../context/ContextBase";
 
 export default function AddTask() {
   const [text, setText] = useState("");
@@ -11,11 +11,13 @@ export default function AddTask() {
   return (
     <>
       <input
+        className="tw-text-red-900"
         placeholder="Add task"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <button
+        className="tw-border tw-border-white tw-rounded tw-px-2"
         onClick={() => {
           setText("");
           dispatch({

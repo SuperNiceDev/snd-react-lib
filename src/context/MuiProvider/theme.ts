@@ -21,8 +21,8 @@ const theme = createTheme({
     // fontFamily: "Arial, sans-serif",
   },
   palette: {
-    mode: "dark",
-    // mode: "light",
+    // mode: "dark",
+    mode: "light",
     // background: {
     //   default: "#___",
     // },

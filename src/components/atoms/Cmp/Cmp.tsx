@@ -1,6 +1,5 @@
 import React, {
   ComponentProps, // memo,
-  FC,
   MouseEvent,
   useEffect,
   useRef,
@@ -26,18 +25,18 @@ export enum Variant {
 
 // log("Variant: ", Variant);
 
-type PropTypesA = {
+type PropsTypeA = {
   propA?: boolean;
 };
 
-type PropTypesB = PropTypesA & {
+type PropsTypeB = PropsTypeA & {
   propB?: boolean;
 };
 
 // https://www.linkedin.com/pulse/antipattern-overflexible-props-reacttypescript-jonas-herrmannsd%2525C3%2525B6rfer-g4atf/?trackingId=kNByyjdA5gMxeRA%2BRGcu3w%3D%3D
-type PropTypesC = Record<string, unknown>;
-type PropTypesD = { [key: string]: string };
-type PropTypesE = PropTypesB & ComponentProps<typeof Text>;
+type PropsTypeC = Record<string, unknown>;
+type PropsTypeD = { [key: string]: string };
+type PropsTypeE = PropsTypeB & ComponentProps<typeof Text>;
 
 export interface ICmpBase {
   className?: string;
@@ -50,20 +49,25 @@ export interface ICmpBase {
 
 // type MyFunctionType = (evt: MouseEvent<HTMLElement>) => void;
 
+const cmpMap = { type1: () => <div /> };
+type CmpType = keyof typeof cmpMap;
+const componentType = "type1";
+const DynamicCmp = cmpMap[componentType as CmpType] || cmpMap["type1"];
+
 export interface ICmp extends ICmpBase {
   // onClick?: MyFunctionType;
   // onClick?: (evt: MouseEvent<HTMLElement>) => void;
   onClick?(evt: MouseEvent<HTMLElement>): void;
 }
 
-const Cmp: FC<ICmp> = ({
+const Cmp = ({
   id,
   name = "not set",
   primary = false,
   className,
   variant,
   onClick,
-}) => {
+}: ICmp) => {
   const ref = useRef<HTMLDivElement>(null!);
 
   // const { key1, ...rest } = {

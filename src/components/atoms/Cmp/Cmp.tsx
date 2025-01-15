@@ -69,6 +69,7 @@ const Cmp = ({
   onClick,
 }: ICmp) => {
   const ref = useRef<HTMLDivElement>(null!);
+  void variant;
 
   // const { key1, ...rest } = {
   //   key1: "key1Value",
@@ -136,7 +137,8 @@ const Cmp = ({
       <div className={`${css.ctn} ctn`} onClick={onClickCb}>
         <p>{`<Cmp_ctn>`}</p>
         <p>
-          &nbsp; &nbsp; {`name: ${name} | id: ${_id} | variant: ${variant}`}
+          {/* &nbsp; &nbsp; {`name: ${name} | id: ${_id} | variant: ${variant}`} */}
+          &nbsp; &nbsp; {`name: ${name} | id: ${_id} | variant:`}
         </p>
         <p>
           &nbsp; &nbsp; {`click to count up: `}

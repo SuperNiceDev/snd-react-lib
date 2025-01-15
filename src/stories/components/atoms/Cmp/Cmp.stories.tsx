@@ -31,6 +31,7 @@ export default {
       //   type: "inline-radio",
       // },
       // control: "text",
+      // control: "radio",
       control: "inline-radio",
       options: ["yes", "no"],
       // table: {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { useContext, useContextDispatch } from "../../../context/ContextBase";
+import { useBaseContext, useContextBaseDispatch } from "../../../context/ContextBase";
 
 export default function TaskList() {
-  const tasks = useContext();
+  const tasks = useBaseContext();
 
   console.log("TaskList()");
 
@@ -20,7 +20,7 @@ export default function TaskList() {
 
 function Task({ task }: any) {
   const [isEditing, setIsEditing] = useState(false);
-  const dispatch = useContextDispatch();
+  const dispatch = useContextBaseDispatch();
   let taskContent;
 
   if (isEditing) {

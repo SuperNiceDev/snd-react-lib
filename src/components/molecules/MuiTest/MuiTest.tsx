@@ -20,7 +20,7 @@ export default function MuiTest() {
           <InputText
             className="tw-border-2 tw-border-slate-300"
             placeholder="InputText component placeholder"
-            value="InputText component value"
+            // value="InputText component value"
           />
         </div>
 
@@ -41,10 +41,10 @@ export default function MuiTest() {
           spacing={2}
           direction="column"
         >
-          <Button variant="contained">variant Contained</Button>
-          <Button variant="outlined">variant Outlined</Button>
+          <Button variant="contained">Button variant Contained</Button>
+          <Button variant="outlined">Button variant Outlined</Button>
           <Button className="tw-text-lime-700" variant="text">
-            variant Text
+            Button variant Text
           </Button>
         </Stack>
       </main>

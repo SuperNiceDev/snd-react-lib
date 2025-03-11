@@ -19,7 +19,7 @@ const App = () => {
     <div className="App">
       <div className="testText">
         {`<Text>`}
-        <Text text="my text" />
+        <Text text="Text text prop test" />
         {`</Text>`}
       </div>
 
@@ -30,8 +30,9 @@ const App = () => {
         <div className="tw-font-bold tw-text-sm tw-text-gray-500">
           <InputText
             className="tw-py-1 tw-px-2 tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
-            // value="my value"
-            defaultValue="my defaultValue"
+            placeholder="InputText placeholder prop test"
+            // value="InputText value prop test"
+            defaultValue="InputText defaultValue prop test"
           />
         </div>
         {`</InputText>`}

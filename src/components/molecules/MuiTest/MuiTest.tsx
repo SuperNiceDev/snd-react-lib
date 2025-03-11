@@ -16,21 +16,25 @@ export default function MuiTest() {
       <main className={`${css.main} tw-px-4`}>
         <div className="tw-mb-2">
           {`<Text>`}
-          <Text className="tw-text-lime-700" text="My text" />
+          <Text className="tw-text-lime-700" text="Text text prop test" />
           {`</Text>`}
         </div>
+
+        <div className="line">{`// -------------------------`}</div>
 
         <div className="tw-mb-2">
           {`<InputText>`}
           <div className="tw-text-lime-700">
             <InputText
               className="tw-border-2 tw-border-slate-300"
-              placeholder="My placeholder"
-              // value="InputText component value"
+              placeholder="InputText placeholder prop test"
+              // value="InputText value prop test"
             />
           </div>
           {`</InputText>`}
         </div>
+
+        <div className="line">{`// -------------------------`}</div>
 
         <div className="tw-mb-2">
           {`<h1>`}
@@ -39,6 +43,8 @@ export default function MuiTest() {
           </h1>
           {`</h1>`}
         </div>
+
+        <div className="line">{`// -------------------------`}</div>
 
         <div className="tw-mb-2">
           {`<Typography variant="h1">`}
@@ -51,6 +57,8 @@ export default function MuiTest() {
           </Typography>
           {`</Typography>`}
         </div>
+
+        <div className="line">{`// -------------------------`}</div>
 
         <div className="tw-mb-2">
           {`<Stack>`}

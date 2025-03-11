@@ -14,39 +14,59 @@ export default function MuiTest() {
       {`<MuiTest>`}
 
       <main className={`${css.main} tw-px-4`}>
-        <Text className="tw-mb-2 tw-text-lime-700" text="My Text component" />
-
-        <div className="tw-mb-2 tw-text-lime-700">
-          <InputText
-            className="tw-border-2 tw-border-slate-300"
-            placeholder="InputText component placeholder"
-            // value="InputText component value"
-          />
+        <div className="tw-mb-2">
+          {`<Text>`}
+          <Text className="tw-text-lime-700" text="My text" />
+          {`</Text>`}
         </div>
 
-        <h1 className="tw-mb-2 tw-text-3xl tw-font-bold tw-text-lime-700">
-          {`Tailwind <h1 />`}
-        </h1>
+        <div className="tw-mb-2">
+          {`<InputText>`}
+          <div className="tw-text-lime-700">
+            <InputText
+              className="tw-border-2 tw-border-slate-300"
+              placeholder="My placeholder"
+              // value="InputText component value"
+            />
+          </div>
+          {`</InputText>`}
+        </div>
 
-        <Typography
-          className="tw-mb-2 tw-text-3xl tw-font-bold tw-text-lime-700"
-          variant="h1"
-          // component="div"
-        >
-          {`Mui <Typography variant="h1" />`}
-        </Typography>
+        <div className="tw-mb-2">
+          {`<h1>`}
+          <h1 className="tw-text-3xl tw-font-bold tw-text-lime-700">
+            {`Tailwind <h1 />`}
+          </h1>
+          {`</h1>`}
+        </div>
 
-        <Stack
-          className="tw-my-4 tw-text-3xl tw-font-bold tw-underline tw-text-lime-700"
-          spacing={2}
-          direction="column"
-        >
-          <Button variant="contained">Button variant Contained</Button>
-          <Button variant="outlined">Button variant Outlined</Button>
-          <Button className="tw-text-lime-700" variant="text">
-            Button variant Text
-          </Button>
-        </Stack>
+        <div className="tw-mb-2">
+          {`<Typography variant="h1">`}
+          <Typography
+            className="tw-text-3xl tw-font-bold tw-text-lime-700"
+            variant="h1"
+            // component="div"
+          >
+            {`Mui <Typography variant="h1" />`}
+          </Typography>
+          {`</Typography>`}
+        </div>
+
+        <div className="tw-mb-2">
+          {`<Stack>`}
+          <Stack
+            className="tw-my-4 tw-text-3xl tw-font-bold tw-underline tw-text-lime-700"
+            spacing={2}
+            direction="column"
+          >
+            <Button variant="contained">Button variant Contained</Button>
+            <Button variant="outlined">Button variant Outlined</Button>
+            <Button className="tw-text-lime-700" variant="text">
+              Button variant Text
+            </Button>
+          </Stack>
+          {`</Stack>`}
+        </div>
       </main>
 
       {`</MuiTest>`}

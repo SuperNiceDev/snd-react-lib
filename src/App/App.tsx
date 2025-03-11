@@ -22,20 +22,29 @@ const App = () => {
         <Text text="my text" />
         {`</Text>`}
       </div>
+
       <div className="line">{`// -------------------------`}</div>
-      <div className="testInputText tw-font-bold tw-text-sm tw-text-gray-500">
+
+      <div className="">
         {`<InputText>`}
-        <InputText
-          className="tw-py-1 tw-px-2 tw-font-bold tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
-          value="my value"
-        />
+        <div className="tw-font-bold tw-text-sm tw-text-gray-500">
+          <InputText
+            className="tw-py-1 tw-px-2 tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
+            // value="my value"
+            defaultValue="my defaultValue"
+          />
+        </div>
         {`</InputText>`}
       </div>
+
       <div className="line">{`// -------------------------`}</div>
+
       <div className="testCmp">
         <Cmp />
       </div>
+
       <div className="line">{`// -------------------------`}</div>
+
       <div className="testContextProviderTasks">
         {`<ContextProviderTasks>`}
         <ContextTasksProvider>
@@ -45,7 +54,9 @@ const App = () => {
         </ContextTasksProvider>
         {`<ContextProviderTasks>`}
       </div>
+
       <div className="line">{`// -------------------------`}</div>
+
       <div className="testMuiTest">
         <StyledEngineProvider injectFirst>
           <MuiProvider>

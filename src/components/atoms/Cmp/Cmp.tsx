@@ -51,6 +51,7 @@ const cmpMap = { type1: () => <div /> };
 type CmpType = keyof typeof cmpMap;
 const componentType = "type1";
 const DynamicCmp = cmpMap[componentType as CmpType] || cmpMap["type1"];
+void DynamicCmp;
 
 // type MyFunctionType = (evt: MouseEvent<HTMLElement>) => void;
 

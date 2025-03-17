@@ -27,8 +27,8 @@
     "declaration": true,
 
     /* --- AND if building for a library in a monorepo: --- */
-    // "composite": true,
-    // "declarationMap": true,
+    "composite": true,
+    "declarationMap": true,
 
     /* --- If NOT transpiling with TypeScript: --- */
     // "module": "preserve",

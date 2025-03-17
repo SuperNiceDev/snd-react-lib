@@ -47,12 +47,12 @@ export interface ICmpBase {
   text?: ComponentProps<typeof Text>;
 }
 
-// type MyFunctionType = (evt: MouseEvent<HTMLElement>) => void;
-
 const cmpMap = { type1: () => <div /> };
 type CmpType = keyof typeof cmpMap;
 const componentType = "type1";
 const DynamicCmp = cmpMap[componentType as CmpType] || cmpMap["type1"];
+
+// type MyFunctionType = (evt: MouseEvent<HTMLElement>) => void;
 
 export interface ICmp extends ICmpBase {
   // onClick?: MyFunctionType;

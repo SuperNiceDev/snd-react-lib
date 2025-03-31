@@ -13,8 +13,11 @@ import "./Cmp.scss";
 
 // const css = { root: "", ctn: "", primary: "" };
 
-// eslint-disable-next-line
+// ts-comiler:
 // @ts-ignore
+
+// es-linter:
+// eslint-disable-next-line
 
 // const log = window.debug("log: Cmp");
 
@@ -47,11 +50,19 @@ export interface ICmpBase {
   text?: ComponentProps<typeof Text>;
 }
 
-const cmpMap = { type1: () => <div /> };
-type CmpType = keyof typeof cmpMap;
-const componentType = "type1";
-const DynamicCmp = cmpMap[componentType as CmpType] || cmpMap["type1"];
-void DynamicCmp;
+// - - - - - - - - - - - dynamic component
+
+enum DynCmpTypes {
+  CmpTypeA = "CmpTypeA",
+};
+
+const dynCmpMap = { [DynCmpTypes.CmpTypeA]: () => <div /> };
+type TDynCmpMap = keyof typeof dynCmpMap;
+const componentType = "CmpTypeA";
+const DynCmp = dynCmpMap[componentType as TDynCmpMap] || dynCmpMap.CmpTypeA;
+void DynCmp;
+
+// - - - - - - - - - - - dynamic component - end
 
 // type MyFunctionType = (evt: MouseEvent<HTMLElement>) => void;
 

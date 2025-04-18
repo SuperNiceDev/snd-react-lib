@@ -24,9 +24,9 @@ export default function MuiTest() {
 
         <div className="tw-mb-2">
           {`<InputText>`}
-          <div className="tw-text-lime-700">
+          <div>
             <InputText
-              className="tw-border-2 tw-border-slate-300"
+              className="tw-px-2 tw-text-lime-700 tw-bg-gray-700 tw-border tw-border-lime-700"
               placeholder="InputText placeholder prop test"
               // value="InputText value prop test"
             />

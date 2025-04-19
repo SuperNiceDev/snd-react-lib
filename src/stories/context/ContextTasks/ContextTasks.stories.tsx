@@ -1,10 +1,9 @@
 import React from "react";
 
+import AddTask from "@src/components/organisms/TaskList/AddTask";
+import TaskList from "@src/components/organisms/TaskList/TaskList";
 import { ContextTasksProvider } from "@src/context/ContextTasks";
 import type { Meta } from "@storybook/react";
-
-import AddTask from "./AddTask";
-import TaskList from "./TaskList";
 
 export default {} as Meta;
 

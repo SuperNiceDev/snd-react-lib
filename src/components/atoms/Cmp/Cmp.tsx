@@ -17,7 +17,6 @@ import "./Cmp.scss";
 // @ts-ignore
 
 // es-linter:
-// eslint-disable-next-line
 
 // const log = window.debug("log: Cmp");
 
@@ -54,7 +53,7 @@ export interface ICmpBase {
 
 enum DynCmpTypes {
   CmpTypeA = "CmpTypeA",
-};
+}
 
 const dynCmpMap = { [DynCmpTypes.CmpTypeA]: () => <div /> };
 type TDynCmpMap = keyof typeof dynCmpMap;
@@ -144,10 +143,14 @@ const Cmp = ({
 
   return (
     <div ref={ref} className={cln}>
-      <div>{"<Cmp>"}</div>
+      <div>
+        <code>{"<Cmp>"}</code>
+      </div>
 
       <div className={`${css.ctn} ctn`} onClick={onClickCb}>
-        <p>{`<Cmp_ctn>`}</p>
+        <p>
+          <code>{`<Cmp_ctn>`}</code>
+        </p>
         <p>
           {/* &nbsp; &nbsp; {`name: ${name} | id: ${_id} | variant: ${variant}`} */}
           &nbsp; &nbsp; {`name: ${name} | id: ${_id} | variant:`}
@@ -157,10 +160,14 @@ const Cmp = ({
           <b className={`bTag`}>{clicks}</b>
           {` clicks`}
         </p>
-        <p>{`<Cmp_ctn />`}</p>
+        <p>
+          <code>{`<Cmp_ctn />`}</code>
+        </p>
       </div>
 
-      <div>{"</Cmp>"}</div>
+      <div>
+        <code>{"</Cmp>"}</code>
+      </div>
     </div>
   );
 };

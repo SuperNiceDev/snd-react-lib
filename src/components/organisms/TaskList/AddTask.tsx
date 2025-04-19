@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useContextBaseDispatch } from "../../../context/ContextBase";
+import { useContextBaseDispatch } from "@src/context/ContextBase";
 
 export default function AddTask() {
   const [text, setText] = useState("");

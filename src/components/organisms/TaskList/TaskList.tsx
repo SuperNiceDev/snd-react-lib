@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-import { useBaseContext, useContextBaseDispatch } from "../../../context/ContextBase";
+import {
+  useBaseContext,
+  useContextBaseDispatch,
+} from "@src/context/ContextBase";
 
 export default function TaskList() {
   const tasks = useBaseContext();

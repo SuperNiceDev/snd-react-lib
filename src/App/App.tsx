@@ -5,19 +5,19 @@ import Cmp from "@src/components/atoms/Cmp";
 import InputText from "@src/components/atoms/InputText";
 import Text from "@src/components/atoms/Text";
 import MuiTest from "@src/components/molecules/MuiTest";
+import AddTask from "@src/components/organisms/TaskList/AddTask";
+import TaskList from "@src/components/organisms/TaskList/TaskList";
 import { ContextTasksProvider } from "@src/context/ContextTasks";
 import MuiProvider from "@src/context/MuiProvider";
 import "@src/css/base.css";
 import "@src/css/base.scss";
 import "@src/css/reset.css";
 import "@src/css/tailwind.css";
-import AddTask from "@src/stories/context/ContextTasks/AddTask";
-import TaskList from "@src/stories/context/ContextTasks/TaskList";
 
 const App = () => {
   return (
     <div className="App">
-      <div className="testText">
+      <div className="">
         <code>{`<Text>`}</code>
         <Text text="Text text prop test" />
         <code>{`</Text>`}</code>
@@ -36,21 +36,21 @@ const App = () => {
         <code>{`</InputText>`}</code>
       </div>
 
-      <div className="testCmp">
+      <div className="">
         <Cmp />
       </div>
 
-      <div className="testContextProviderTasks">
-        <code>{`<ContextProviderTasks>`}</code>
+      <div className="">
+        <code>{`<ContextTasks>`}</code>
         <ContextTasksProvider>
           <h1>Day off in Kyoto</h1>
           <AddTask />
           <TaskList />
         </ContextTasksProvider>
-        <code>{`<ContextProviderTasks>`}</code>
+        <code>{`<ContextTasks>`}</code>
       </div>
 
-      <div className="testMuiTest">
+      <div className="">
         <StyledEngineProvider injectFirst>
           <MuiProvider>
             <MuiTest />

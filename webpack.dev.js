@@ -1,5 +1,6 @@
 const path = require("path");
-// const ReactRefreshBabel = require("react-refresh/babel");
+const webpack = require("webpack");
+const ReactRefreshBabel = require("react-refresh/babel");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
@@ -26,10 +27,10 @@ module.exports = (env) => {
           test: /\.(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader",
-            // options: {
-            //   plugins: [ReactRefreshBabel],
-            // },
+            loader: require.resolve("babel-loader"),
+            options: {
+              plugins: [ReactRefreshBabel],
+            },
           },
         },
         // ------ rules[1]
@@ -98,6 +99,7 @@ module.exports = (env) => {
         },
       ],
     },
+    mode: "development",
     // devtool: 'source-map',
     devtool: "eval-cheap-module-source-map",
     devServer: {
@@ -118,6 +120,7 @@ module.exports = (env) => {
       filename: "bundle.js",
     },
     plugins: [
+      new webpack.HotModuleReplacementPlugin(),
       new ReactRefreshWebpackPlugin({ overlay: false }),
       new Dotenv({
         // path: dotenvFilename,

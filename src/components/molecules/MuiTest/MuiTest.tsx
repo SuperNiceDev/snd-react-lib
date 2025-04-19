@@ -13,18 +13,18 @@ export default function MuiTest() {
     <div className={`${css.root}`}>
       <code>{`<MuiTest> (snd-react-lib)`}</code>
 
-      <main className={`${css.main} tw:px-4`}>
-        <div className="tw:mb-2">
+      <main className={`${css.main} tw-px-4`}>
+        <div className="tw-mb-2">
           <code>{`<Text> (snd-react-lib)`}</code>
-          <Text className="tw:text-lime-700_" text="Text prop text test" />
+          <Text className="tw-text-lime-700_" text="Text prop text test" />
           <code>{`</Text>`}</code>
         </div>
 
-        <div className="tw:mb-2">
+        <div className="tw-mb-2">
           <code>{`<InputText> (snd-react-lib)`}</code>
           <div>
             <InputText
-              className="tw:px-2 tw:text-lime-700_ tw:bg-gray-700_ tw:border tw:border-lime-700_"
+              className="tw-px-2 tw-text-lime-700_ tw-bg-gray-700_ tw-border tw-border-lime-700_"
               placeholder="InputText prop placeholder test"
               // value="InputText prop value test"
             />
@@ -32,18 +32,18 @@ export default function MuiTest() {
           <code>{`</InputText>`}</code>
         </div>
 
-        <div className="tw:mb-2">
+        <div className="tw-mb-2">
           <code>{`<h1>`}</code>
-          <h1 className="tw:text-3xl tw:font-bold tw:text-lime-700_">
+          <h1 className="tw-text-3xl tw-font-bold tw-text-lime-700_">
             {`Tailwind <h1 />`}
           </h1>
           <code>{`</h1>`}</code>
         </div>
 
-        <div className="tw:mb-2">
+        <div className="tw-mb-2">
           <code>{`<Typography variant="h1">`}</code>
           <Typography
-            className="tw:text-3xl tw:font-bold tw:text-lime-700_"
+            className="tw-text-3xl tw-font-bold tw-text-lime-700_"
             variant="h1"
             // component="div"
           >
@@ -52,16 +52,16 @@ export default function MuiTest() {
           <code>{`</Typography>`}</code>
         </div>
 
-        <div className="tw:mb-2">
+        <div className="tw-mb-2">
           <code>{`<Stack>`}</code>
           <Stack
-            className="tw:my-4 tw:text-3xl tw:font-bold tw:underline tw:text-lime-700_"
+            className="tw-my-4 tw-text-3xl tw-font-bold tw-underline tw-text-lime-700_"
             spacing={2}
             direction="column"
           >
             <Button variant="contained">Button variant Contained</Button>
             <Button variant="outlined">Button variant Outlined</Button>
-            <Button className="tw:text-lime-700__" variant="text">
+            <Button className="tw-text-lime-700__" variant="text">
               Button variant Text
             </Button>
           </Stack>

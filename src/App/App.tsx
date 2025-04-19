@@ -18,45 +18,37 @@ const App = () => {
   return (
     <div className="App">
       <div className="testText">
-        {`<Text>`}
+        <code>{`<Text>`}</code>
         <Text text="Text text prop test" />
-        {`</Text>`}
+        <code>{`</Text>`}</code>
       </div>
 
-      <div className="line">{`// -------------------------`}</div>
-
       <div className="">
-        {`<InputText>`}
+        <code>{`<InputText>`}</code>
         <div className="tw-font-bold tw-text-sm tw-text-gray-500">
           <InputText
             className="tw-py-1 tw-px-2 tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
-            placeholder="InputText placeholder prop test"
-            // value="InputText value prop test"
-            defaultValue="InputText defaultValue prop test"
+            placeholder="InputText prop placeholder test"
+            defaultValue="InputText prop defaultValue test"
+            // value="InputText prop value test"
           />
         </div>
-        {`</InputText>`}
+        <code>{`</InputText>`}</code>
       </div>
-
-      <div className="line">{`// -------------------------`}</div>
 
       <div className="testCmp">
         <Cmp />
       </div>
 
-      <div className="line">{`// -------------------------`}</div>
-
       <div className="testContextProviderTasks">
-        {`<ContextProviderTasks>`}
+        <code>{`<ContextProviderTasks>`}</code>
         <ContextTasksProvider>
           <h1>Day off in Kyoto</h1>
           <AddTask />
           <TaskList />
         </ContextTasksProvider>
-        {`<ContextProviderTasks>`}
+        <code>{`<ContextProviderTasks>`}</code>
       </div>
-
-      <div className="line">{`// -------------------------`}</div>
 
       <div className="testMuiTest">
         <StyledEngineProvider injectFirst>

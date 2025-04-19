@@ -13,20 +13,20 @@ export default function MuiTest() {
     <div className={`${css.root}`}>
       {`<MuiTest>`}
 
-      <main className={`${css.main} tw-px-4`}>
-        <div className="tw-mb-2">
+      <main className={`${css.main} tw:px-4`}>
+        <div className="tw:mb-2">
           {`<Text>`}
-          <Text className="tw-text-lime-700" text="Text text prop test" />
+          <Text className="tw:text-lime-700_" text="Text text prop test" />
           {`</Text>`}
         </div>
 
         <div className="line">{`// -------------------------`}</div>
 
-        <div className="tw-mb-2">
+        <div className="tw:mb-2">
           {`<InputText>`}
           <div>
             <InputText
-              className="tw-px-2 tw-text-lime-700 tw-bg-gray-700 tw-border tw-border-lime-700"
+              className="tw:px-2 tw:text-lime-700_ tw:bg-gray-700_ tw:border tw:border-lime-700"
               placeholder="InputText placeholder prop test"
               // value="InputText value prop test"
             />
@@ -36,9 +36,9 @@ export default function MuiTest() {
 
         <div className="line">{`// -------------------------`}</div>
 
-        <div className="tw-mb-2">
+        <div className="tw:mb-2">
           {`<h1>`}
-          <h1 className="tw-text-3xl tw-font-bold tw-text-lime-700">
+          <h1 className="tw:text-3xl tw:font-bold tw:text-lime-700_">
             {`Tailwind <h1 />`}
           </h1>
           {`</h1>`}
@@ -46,10 +46,10 @@ export default function MuiTest() {
 
         <div className="line">{`// -------------------------`}</div>
 
-        <div className="tw-mb-2">
+        <div className="tw:mb-2">
           {`<Typography variant="h1">`}
           <Typography
-            className="tw-text-3xl tw-font-bold tw-text-lime-700"
+            className="tw:text-3xl tw:font-bold tw:text-lime-700_"
             variant="h1"
             // component="div"
           >
@@ -60,16 +60,16 @@ export default function MuiTest() {
 
         <div className="line">{`// -------------------------`}</div>
 
-        <div className="tw-mb-2">
+        <div className="tw:mb-2">
           {`<Stack>`}
           <Stack
-            className="tw-my-4 tw-text-3xl tw-font-bold tw-underline tw-text-lime-700"
+            className="tw:my-4 tw:text-3xl tw:font-bold tw:underline tw:text-lime-700_"
             spacing={2}
             direction="column"
           >
             <Button variant="contained">Button variant Contained</Button>
             <Button variant="outlined">Button variant Outlined</Button>
-            <Button className="tw-text-lime-700" variant="text">
+            <Button className="tw:text-lime-700__" variant="text">
               Button variant Text
             </Button>
           </Stack>

@@ -37,3 +37,12 @@
 - install:
   yarn add -D typescript-plugin-css-modules
   (use Workspace version of Type Script)
+
+
+## tailwind
+- https://tailwindcss.com/docs/installation/using-postcss
+
+- install:
+  yarn add -D postcss-loader
+
+- add postcss-loader to webpack.config.ts css rule

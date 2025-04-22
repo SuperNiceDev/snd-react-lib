@@ -46,7 +46,6 @@
     "paths": {
       "@src/*": ["src/*"],
     },
-    "types": ["@testing-library/jest-dom"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
 

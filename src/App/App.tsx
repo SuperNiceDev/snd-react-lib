@@ -1,27 +1,28 @@
 import React from "react";
 
-import { StyledEngineProvider } from "@mui/material";
+// import { StyledEngineProvider } from "@mui/material";
 import Cmp from "@src/components/atoms/Cmp";
 import InputText from "@src/components/atoms/InputText";
-import Text from "@src/components/atoms/Text";
-import MuiTest from "@src/components/molecules/MuiTest";
-import AddTask from "@src/components/organisms/TaskList/AddTask";
-import TaskList from "@src/components/organisms/TaskList/TaskList";
-import { ContextTasksProvider } from "@src/context/ContextTasks";
-import MuiProvider from "@src/context/MuiProvider";
-import "@src/css/base.css";
-import "@src/css/base.scss";
-import "@src/css/reset.css";
-import "@src/css/tailwind.css";
+
+// import Text from "@src/components/atoms/Text";
+// import MuiTest from "@src/components/molecules/MuiTest";
+// import AddTask from "@src/components/organisms/TaskList/AddTask";
+// import TaskList from "@src/components/organisms/TaskList/TaskList";
+// import { ContextTasksProvider } from "@src/context/ContextTasks";
+// import MuiProvider from "@src/context/MuiProvider";
+// import "@src/css/base.css";
+// import "@src/css/base.scss";
+// import "@src/css/reset.css";
+// import "@src/css/tailwind.css";
 
 const App = () => {
   return (
     <div className="App">
-      <div className="">
+      {/* <div className="">
         <code>{`<Text>`}</code>
         <Text text="Text text prop test" />
         <code>{`</Text>`}</code>
-      </div>
+      </div> */}
 
       <div className="">
         <code>{`<InputText>`}</code>
@@ -40,7 +41,7 @@ const App = () => {
         <Cmp />
       </div>
 
-      <div className="">
+      {/* <div className="">
         <code>{`<ContextTasks>`}</code>
         <ContextTasksProvider>
           <h1>Day off in Kyoto</h1>
@@ -56,7 +57,7 @@ const App = () => {
             <MuiTest />
           </MuiProvider>
         </StyledEngineProvider>
-      </div>
+      </div> */}
     </div>
   );
 };

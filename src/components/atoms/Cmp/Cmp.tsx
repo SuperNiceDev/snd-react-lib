@@ -1,5 +1,6 @@
 import React, {
-  ComponentProps, // memo,
+  ComponentProps,
+  // memo,
   MouseEvent,
   useEffect,
   useRef,

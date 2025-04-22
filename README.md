@@ -50,3 +50,6 @@
 
 ## storybook
 - https://storybook.js.org/docs/get-started/frameworks/react-webpack5
+
+- install:
+  - @storybook/addon-styling-webpack

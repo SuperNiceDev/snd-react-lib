@@ -7,8 +7,10 @@
     "dev": "webpack serve --config webpack.config.ts --mode development",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "removeNodeModules": "rm -rf ./node_modules",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev --ci -p 6006",
+    "build-storybook": "storybook build",
+    "story": "yarn storybook",
+    "story-build": "yarn build-storybook"
   },
   "browserslist": {
     "development": [
@@ -32,6 +34,7 @@
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
     "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/blocks": "^8.6.12",
     "@storybook/react": "^8.6.12",

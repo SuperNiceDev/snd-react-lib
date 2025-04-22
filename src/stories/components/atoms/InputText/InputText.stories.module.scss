@@ -1,0 +1,18 @@
+.root {
+  padding: 20px;
+
+  .myInput {
+    position: relative;
+    // padding: 6px;
+    // border: 1px solid black;
+    
+    &.myInputMultiline {
+      position: relative;
+      // height: 120px;
+    }
+  }
+
+  .renderTest {
+    padding: 6px;
+  }
+}

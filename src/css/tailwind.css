@@ -1,1 +1,11 @@
 @import "tailwindcss" important prefix(tw);
+
+:root {
+  --cst-color-500:  #c59f74 ;
+}
+
+/* https://tailwindcss.com/docs/theme#overriding-the-default-theme */
+
+@theme {
+  --color-lime-500: var(--cst-color-500);
+}

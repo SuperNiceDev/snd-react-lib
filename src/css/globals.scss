@@ -1,0 +1,8 @@
+@mixin backgroundImage($url, $size: contain /* cover */, $position: center) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+// @include backgroundImage("./icon.svg");

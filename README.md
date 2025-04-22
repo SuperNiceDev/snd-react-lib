@@ -46,3 +46,7 @@
   yarn add -D postcss-loader
 
 - add postcss-loader to webpack.config.ts css rule
+
+
+## storybook
+- https://storybook.js.org/docs/get-started/frameworks/react-webpack5

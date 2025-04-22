@@ -13,3 +13,27 @@
 [Docs](https://github.com/zloirock/core-js)
 
 
+## linting / auto format
+
+- install:
+  yarn add -D prettier eslint-config-prettier eslint-plugin-prettier @eslint/compat
+
+- add file .prettierrc.js
+
+- adjust eslint.config.mjs
+
+
+## auto sort imports
+
+- install:
+  yarn add -D @trivago/prettier-plugin-sort-imports
+
+- adjust file .prettierrc.js
+  https://github.com/trivago/prettier-plugin-sort-imports?tab=readme-ov-file#install
+
+
+## typescript css-modules
+
+- install:
+  yarn add -D typescript-plugin-css-modules
+  (use Workspace version of Type Script)

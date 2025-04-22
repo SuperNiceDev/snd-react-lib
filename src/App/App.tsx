@@ -1,11 +1,13 @@
 import React from "react";
 
-// import { StyledEngineProvider } from "@mui/material";
 import Cmp from "@src/components/atoms/Cmp";
 import InputText from "@src/components/atoms/InputText";
+import Text from "@src/components/atoms/Text";
 import "@src/css/base.css";
 import "@src/css/base.scss";
+import "@src/css/tailwind.css";
 
+// import { StyledEngineProvider } from "@mui/material";
 // import Text from "@src/components/atoms/Text";
 // import MuiTest from "@src/components/molecules/MuiTest";
 // import AddTask from "@src/components/organisms/TaskList/AddTask";
@@ -13,22 +15,20 @@ import "@src/css/base.scss";
 // import { ContextTasksProvider } from "@src/context/ContextTasks";
 // import MuiProvider from "@src/context/MuiProvider";
 
-// import "@src/css/tailwind.css";
-
 const App = () => {
   return (
     <div className="App">
-      {/* <div className="">
+      <div className="">
         <code>{`<Text>`}</code>
         <Text text="Text text prop test" />
         <code>{`</Text>`}</code>
-      </div> */}
+      </div>
 
       <div className="">
         <code>{`<InputText>`}</code>
-        <div className="tw-font-bold tw-text-sm tw-text-gray-500">
+        <div className="tw:font-bold tw:text-sm tw:text-gray-500">
           <InputText
-            className="tw-py-1 tw-px-2 tw-text-xs tw-text-red-500 tw-border tw-border-red-500"
+            className="tw:py-1 tw:px-2 tw:text-xs tw:text-red-500 tw:border tw:border-red-500"
             placeholder="InputText prop placeholder test"
             defaultValue="InputText prop defaultValue test"
             // value="InputText prop value test"

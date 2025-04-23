@@ -1,10 +1,10 @@
 import React, { MouseEvent, useEffect, useState } from "react";
 
-import Cmp, { ICmp, Variant } from "@src/components/atoms/Cmp";
+import Cmp, { ICmp, Variant } from "snd-react-lib/components/atoms/Cmp";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
-// import { componentsPath } from "@src/stories/constants";
+// import { componentsPath } from "snd-react-lib/stories/constants";
 import css from "./Cmp.stories.module.scss";
 
 // eslint-disable-next-line

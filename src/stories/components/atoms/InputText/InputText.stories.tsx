@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import InputText, {
   InputTextProps,
   InputTypes,
-} from "@src/components/atoms/InputText";
+} from "snd-react-lib/components/atoms/InputText";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 

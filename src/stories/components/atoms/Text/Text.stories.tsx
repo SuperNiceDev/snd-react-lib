@@ -1,7 +1,7 @@
 import React from "react";
 
-// import Text, { Tags } from "@src/components/atoms/Text";
-import Text, { Tags, TextProps } from "@src/components/atoms/Text";
+// import Text, { Tags } from "snd-react-lib/components/atoms/Text";
+import Text, { Tags, TextProps } from "snd-react-lib/components/atoms/Text";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import css from "./Text.stories.module.scss";

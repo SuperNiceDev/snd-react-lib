@@ -42,7 +42,7 @@ const config = {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     const resolve = config.resolve;
     if (resolve?.alias) {
-      resolve.alias["@src"] = path.resolve(__dirname, "../src");
+      resolve.alias["snd-react-lib"] = path.resolve(__dirname, "../src");
     }
     const newConfig = {
       ...config,

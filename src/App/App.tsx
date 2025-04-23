@@ -1,19 +1,19 @@
 import React from "react";
 
-import Cmp from "@src/components/atoms/Cmp";
-import InputText from "@src/components/atoms/InputText";
-import Text from "@src/components/atoms/Text";
-import "@src/css/base.css";
-import "@src/css/base.scss";
-import "@src/css/tailwind.css";
+import Cmp from "snd-react-lib/components/atoms/Cmp";
+import InputText from "snd-react-lib/components/atoms/InputText";
+import Text from "snd-react-lib/components/atoms/Text";
+import "snd-react-lib/css/base.css";
+import "snd-react-lib/css/base.scss";
+import "snd-react-lib/css/tailwind.css";
 
 // import { StyledEngineProvider } from "@mui/material";
-// import Text from "@src/components/atoms/Text";
-// import MuiTest from "@src/components/molecules/MuiTest";
-// import AddTask from "@src/components/organisms/TaskList/AddTask";
-// import TaskList from "@src/components/organisms/TaskList/TaskList";
-// import { ContextTasksProvider } from "@src/context/ContextTasks";
-// import MuiProvider from "@src/context/MuiProvider";
+// import Text from "snd-react-lib/components/atoms/Text";
+// import MuiTest from "snd-react-lib/components/molecules/MuiTest";
+// import AddTask from "snd-react-lib/components/organisms/TaskList/AddTask";
+// import TaskList from "snd-react-lib/components/organisms/TaskList/TaskList";
+// import { ContextTasksProvider } from "snd-react-lib/context/ContextTasks";
+// import MuiProvider from "snd-react-lib/context/MuiProvider";
 
 const App = () => {
   return (

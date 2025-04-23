@@ -12,7 +12,7 @@ const config: Configuration = {
   entry: "./src/index.tsx",
   resolve: {
     alias: {
-      "@src": path.resolve(__dirname, "src"),
+      "snd-react-lib": path.resolve(__dirname, "src"),
       // '@assets': path.resolve(__dirname, 'src/assets/'),
     },
     extensions: [".ts", ".tsx", ".js"],

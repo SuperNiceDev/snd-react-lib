@@ -2,6 +2,10 @@ import React, { MouseEvent, ReactNode } from "react";
 
 import css from "./Text.module.scss";
 
+// const css = {
+//   root: "root",
+// };
+
 export enum Tags {
   div = "div",
   span = "span",

@@ -44,7 +44,6 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      // "@src/*": ["src/*"],
       "snd-react-lib/*": ["src/*"],
     },
     "plugins": [{ "name": "typescript-plugin-css-modules" }]

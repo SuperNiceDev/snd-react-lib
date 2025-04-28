@@ -53,3 +53,13 @@
 
 - install:
   - @storybook/addon-styling-webpack
+
+
+## Jest / testing-library
+
+https://dev.to/debajit13/unit-testing-react-components-with-jest-and-react-testing-library-3he
+
+ - install
+  - jest @testing-library/react @testing-library/jest-dom @types/jest ts-jest
+  - jest-environment-jsdom
+  - identity-obj-proxy

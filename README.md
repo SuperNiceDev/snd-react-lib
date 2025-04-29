@@ -13,7 +13,7 @@
 [Docs](https://github.com/zloirock/core-js)
 
 
-## linting / auto format
+## eslint / prettier
 
 - install:
   yarn add -D prettier eslint-config-prettier eslint-plugin-prettier @eslint/compat
@@ -23,7 +23,7 @@
 - adjust eslint.config.mjs
 
 
-## auto sort imports
+## Auto sort imports
 
 - install:
   yarn add -D @trivago/prettier-plugin-sort-imports
@@ -32,14 +32,14 @@
   https://github.com/trivago/prettier-plugin-sort-imports?tab=readme-ov-file#install
 
 
-## typescript css-modules
+## Typescript CSS-modules
 
 - install:
   yarn add -D typescript-plugin-css-modules
   (use Workspace version of Type Script)
 
 
-## tailwind
+## Tailwind
 - https://tailwindcss.com/docs/installation/using-postcss
 
 - install:
@@ -48,7 +48,7 @@
 - add postcss-loader to webpack.config.ts css rule
 
 
-## storybook
+## Storybook
 - https://storybook.js.org/docs/get-started/frameworks/react-webpack5
 
 - install:
@@ -61,5 +61,4 @@ https://dev.to/debajit13/unit-testing-react-components-with-jest-and-react-testi
 
  - install
   - jest @testing-library/react @testing-library/jest-dom @types/jest ts-jest
-  - jest-environment-jsdom
-  - identity-obj-proxy
+  - jest-environment-jsdom identity-obj-proxy

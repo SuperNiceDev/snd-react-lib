@@ -1,64 +1,65 @@
 # Technologies
 
-### Webpack [Docs](https://webpack.js.org/configuration/)
+##### Webpack [Docs](https://webpack.js.org/configuration/)
 
-##### Typescript
-[Docs](https://www.typescriptlang.org/docs)
-[Howto](https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/)
+##### Typescript [Docs](https://www.typescriptlang.org/docs)
 
-##### Babel
-[Docs](https://babeljs.io/docs/en/)
+##### Babel [Docs](https://babeljs.io/docs/en/)
 
-##### core-js
-[Docs](https://github.com/zloirock/core-js)
+##### core-js [Docs](https://github.com/zloirock/core-js)
 
 
-## eslint / prettier
+# Project Setup
 
-- install:
-  yarn add -D prettier eslint-config-prettier eslint-plugin-prettier @eslint/compat
+#### eslint / prettier
 
-- add file .prettierrc.js
-
-- adjust eslint.config.mjs
-
-
-## Auto sort imports
-
-- install:
-  yarn add -D @trivago/prettier-plugin-sort-imports
-
-- adjust file .prettierrc.js
-  https://github.com/trivago/prettier-plugin-sort-imports?tab=readme-ov-file#install
+```shell
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier @eslint/compat
+```
+add file .prettierrc.js
+adjust eslint.config.mjs
 
 
-## Typescript CSS-modules
+#### Auto sort imports
+https://github.com/trivago/prettier-plugin-sort-imports?tab=readme-ov-file#install
 
-- install:
-  yarn add -D typescript-plugin-css-modules
-  (use Workspace version of Type Script)
-
-
-## Tailwind
-- https://tailwindcss.com/docs/installation/using-postcss
-
-- install:
-  yarn add -D postcss-loader
-
-- add postcss-loader to webpack.config.ts css rule
+```shell
+yarn add -D @trivago/prettier-plugin-sort-imports
+```
+adjust .prettierrc.js
 
 
-## Storybook
-- https://storybook.js.org/docs/get-started/frameworks/react-webpack5
+#### Typescript CSS-modules
+https://www.npmjs.com/package/typescript-plugin-css-modules
 
-- install:
-  - @storybook/addon-styling-webpack
+```shell
+yarn add -D typescript-plugin-css-modules
+```
+(use Workspace version of Type Script)
 
 
-## Jest / testing-library
+#### Tailwind
+https://tailwindcss.com/docs/installation/using-postcss
+
+```shell
+yarn add -D postcss-loader
+```
+add postcss-loader to webpack.config.ts css rule
+
+
+#### Storybook
+https://storybook.js.org/docs/get-started/frameworks/react-webpack5
+
+```shell
+yarn add -D @storybook/addon-styling-webpack
+```
+
+
+#### Jest / testing-library
 
 https://dev.to/debajit13/unit-testing-react-components-with-jest-and-react-testing-library-3he
 
- - install
-  - jest @testing-library/react @testing-library/jest-dom @types/jest ts-jest
-  - jest-environment-jsdom identity-obj-proxy
+```shell
+yarn add -D jest @testing-library/react @testing-library/jest-dom @types/jest ts-jest
+yarn add -D jest-environment-jsdom identity-obj-proxy
+```

@@ -7,5 +7,5 @@
 /* https://tailwindcss.com/docs/theme#overriding-the-default-theme */
 
 @theme {
-  --color-lime-500: var(--cst-color-500);
+  --color-fuchsia-500: var(--cst-color-500);
 }

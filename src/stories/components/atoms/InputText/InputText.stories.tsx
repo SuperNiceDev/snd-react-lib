@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
+import { action } from "@storybook/addon-actions";
+import type { Meta, StoryObj } from "@storybook/react";
 import InputText, {
   InputTextProps,
   InputTypes,
 } from "snd-react-lib/components/atoms/InputText";
-import { action } from "@storybook/addon-actions";
-import type { Meta, StoryObj } from "@storybook/react";
 
 import css from "./InputText.stories.module.scss";
 
@@ -81,7 +81,7 @@ export const StoryInputText = {
   args: {
     ...sharedArgs,
     className:
-      "tw:py-1 tw:px-2 tw:text-xs tw:text-lime-500 tw:border tw:border-lime-500",
+      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
   },
   parameters: {
     layout: "fullscreen",
@@ -94,7 +94,7 @@ export const StoryInputTextMultiline = {
   args: {
     ...sharedArgs,
     className:
-      "tw:py-1 tw:px-2 tw:text-xs tw:text-lime-500 tw:border tw:border-lime-500",
+      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
     multiline: true,
     value: `Lorem Ispum,
 

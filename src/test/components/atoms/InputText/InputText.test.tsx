@@ -1,9 +1,9 @@
 import React from "react";
 
-import InputText from "@src/components/atoms/InputText";
 import { fireEvent, render, screen } from "@testing-library/react";
 // import '@testing-library/jest-dom/extend-expect';
 import userEvent from "@testing-library/user-event";
+import InputText from "snd-react-lib/components/atoms/InputText";
 
 const renderComponent = (props = {}) => {
   return render(<InputText {...props} onChange={() => {}} />);

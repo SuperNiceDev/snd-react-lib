@@ -6,7 +6,6 @@ exports[`InputText Component matches the snapshot 1`] = `
     class="root InputText"
     placeholder="My placeholder"
     type="text"
-    value=""
   />
 </DocumentFragment>
 `;

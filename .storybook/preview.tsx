@@ -1,11 +1,10 @@
 import React from "react";
 
-import { StyledEngineProvider } from "@mui/material";
-import MuiProvider from "@src/context/MuiProvider";
-import "@src/css/base.css";
-import "@src/css/reset.css";
-import "@src/css/tailwind.css";
-import { makeDecorator } from "@storybook/preview-api";
+// import { StyledEngineProvider } from "@mui/material";
+// import MuiProvider from "snd-react-lib/context/MuiProvider";
+import "snd-react-lib/css/base.css";
+import "snd-react-lib/css/tailwind.css";
+// import { makeDecorator } from "@storybook/preview-api";
 import { Preview } from "@storybook/react";
 
 export const globalTypes = {
@@ -24,18 +23,18 @@ export const globalTypes = {
   },
 };
 
-export const muiDecorator = makeDecorator({
-  name: "MuiDecorator",
-  parameterName: "MuiDecoratorParameter",
-  // skipIfNoParametersOrOptions: true,
-  wrapper: (getStory: any, context, { parameters }) => {
-    return (
-      <StyledEngineProvider injectFirst>
-        <MuiProvider>{getStory(context)}</MuiProvider>
-      </StyledEngineProvider>
-    );
-  },
-});
+// export const muiDecorator = makeDecorator({
+//   name: "MuiDecorator",
+//   parameterName: "MuiDecoratorParameter",
+//   // skipIfNoParametersOrOptions: true,
+//   wrapper: (getStory: any, context, { parameters }) => {
+//     return (
+//       <StyledEngineProvider injectFirst>
+//         <MuiProvider>{getStory(context)}</MuiProvider>
+//       </StyledEngineProvider>
+//     );
+//   },
+// });
 
 const preview: Preview = {
   parameters: {
@@ -53,7 +52,7 @@ const preview: Preview = {
       default: "Light",
     },
   },
-  decorators: [muiDecorator],
+  // decorators: [muiDecorator],
   // tags: ["autodocs"],
 };
 

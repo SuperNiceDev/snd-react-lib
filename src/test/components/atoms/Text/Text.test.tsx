@@ -1,7 +1,7 @@
 import React from "react";
 
-import Text from "@src/components/atoms/Text";
 import { render, screen } from "@testing-library/react";
+import Text from "snd-react-lib/components/atoms/Text";
 
 it("matches the snapshot", () => {
   const { asFragment } = render(<Text>My text</Text>);

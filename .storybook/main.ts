@@ -1,8 +1,6 @@
 import path from "path";
 
-import webpackDevConfFunc from "../webpack.dev.js";
-
-const webpackDevConf = webpackDevConfFunc();
+import webpackDevConf from "../webpack.config.ts";
 
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
@@ -44,7 +42,7 @@ const config = {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     const resolve = config.resolve;
     if (resolve?.alias) {
-      resolve.alias["@src"] = path.resolve(__dirname, "../src");
+      resolve.alias["snd-react-lib"] = path.resolve(__dirname, "../src");
     }
     const newConfig = {
       ...config,
@@ -52,8 +50,8 @@ const config = {
       module: {
         rules: [
           ...config.module.rules,
-          webpackDevConf.module.rules[2],
-          webpackDevConf.module.rules[3],
+          webpackDevConf?.module?.rules?.[2],
+          webpackDevConf?.module?.rules?.[3],
         ],
       },
     };

@@ -25,3 +25,22 @@
 //   ::::: Stop bouncing
 //   */
 // }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;800&display=swap');
+
+
+:root {
+  --cst-color-code: #bbbbbb;
+  // --cst-color-code-bg: #f5f5f5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+code {
+  font-family: monospace;
+  color: var(--cst-color-code);
+  font-size: 12px;
+  // background-color: var(--cst-color-code-bg);
+}

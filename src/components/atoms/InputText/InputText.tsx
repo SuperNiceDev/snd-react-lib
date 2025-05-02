@@ -7,6 +7,11 @@ import React, {
 
 import css from "./InputText.module.scss";
 
+// const css = {
+//   root: "root",
+//   disabled: "disabled",
+// };
+
 export enum InputTypes {
   text = "text",
   password = "password",

@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 
+import { action } from "@storybook/addon-actions";
+import type { Meta, StoryObj } from "@storybook/react";
 import InputText, {
   InputTextProps,
   InputTypes,
-} from "@src/components/atoms/InputText";
-import { action } from "@storybook/addon-actions";
-import type { Meta, StoryObj } from "@storybook/react";
+} from "snd-react-lib/components/atoms/InputText";
 
 import css from "./InputText.stories.module.scss";
 
 // type InputTextProps = typeof InputText;
-
-// const log = window.debug("log: InputText.stories");
 
 export default {
   component: InputText,
@@ -52,7 +50,7 @@ const Template = (args: InputTextProps) => {
 
   return (
     // <div className={`${css.root}`}>
-    <div className={`${css.root} tw-text-red-500 tw-font-bold tw-text-xs`}>
+    <div className={`${css.root} tw:text-red-500 tw:font-bold tw:text-xs`}>
       <span>InputText: </span>
       <InputText {...args} className={cln} value={value} onChange={onChange} />
       <div className={css.renderTest}>Render Test 1</div>
@@ -83,7 +81,7 @@ export const StoryInputText = {
   args: {
     ...sharedArgs,
     className:
-      "tw-text-gray-500 tw-border tw-border-gray-500 tw-text-sm tw-py-1 tw-px-2",
+      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
   },
   parameters: {
     layout: "fullscreen",
@@ -96,7 +94,7 @@ export const StoryInputTextMultiline = {
   args: {
     ...sharedArgs,
     className:
-      "tw-text-gray-500 tw-border tw-border-gray-500 tw-text-sm tw-py-1 tw-px-2",
+      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
     multiline: true,
     value: `Lorem Ispum,
 

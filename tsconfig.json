@@ -44,9 +44,8 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"],
+      "snd-react-lib/*": ["src/*"],
     },
-    "types": ["@testing-library/jest-dom"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
 

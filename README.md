@@ -36,29 +36,29 @@ The plan is to add one new item every few days.
 
 ## Setup
 
-install Node.js
+- install Node.js:
 https://nodejs.org/en/download
 
-install yarn
+- install yarn:
 https://yarnpkg.com/getting-started/install
 https://classic.yarnpkg.com/en/docs/install#mac-stable
 
-Install node modules
+- install node modules:
 ```sh
 yarn
 ```
 
-Run webpack dev server
+- Run webpack dev server:
 ```sh
 yarn dev
 ```
 
-Run Storybook
+- Run Storybook:
 ```sh
 yarn story
 ```
 
-Run tests
+- Run tests:
 ```sh
 yarn test
 ```

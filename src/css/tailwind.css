@@ -1,0 +1,9 @@
+@import "tailwindcss" important prefix(tw);
+
+:root {
+  --cst-color:  #e12afb;
+}
+
+@theme {
+  --color-fuchsia-500: var(--cst-color);
+}

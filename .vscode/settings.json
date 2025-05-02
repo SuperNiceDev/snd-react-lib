@@ -1,8 +1,0 @@
-{
-  "typescript.preferences.importModuleSpecifier": "non-relative", // "relative"
-  "typescript.tsdk": "node_modules/typescript/lib",
-  // "typescript.preferences.autoImportFileExcludePatterns": ["@stitches/react"],
-  // "typescript.preferences.autoImportSpecifierExcludeRegexes": [
-  //   "^node:",
-  // ],
-}

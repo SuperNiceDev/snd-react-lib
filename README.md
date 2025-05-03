@@ -48,17 +48,17 @@ https://classic.yarnpkg.com/en/docs/install#mac-stable
 yarn
 ```
 
-- Run webpack dev server:
+- run webpack dev server:
 ```sh
 yarn dev
 ```
 
-- Run Storybook:
+- run Storybook:
 ```sh
 yarn story
 ```
 
-- Run tests:
+- run tests:
 ```sh
 yarn test
 ```

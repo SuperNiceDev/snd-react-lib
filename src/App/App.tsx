@@ -12,7 +12,7 @@ const App = () => {
       <div className="">
         <code>{`<Text>`}</code>
         <Text
-          className="tw:font-bold tw:text-sm tw:text-fuchsia-500"
+          className="font-bold text-sm text-fuchsia-500"
           text="Text text prop test"
         />
         <code>{`</Text>`}</code>
@@ -20,9 +20,9 @@ const App = () => {
 
       <div className="">
         <code>{`<InputText>`}</code>
-        <div className="tw:font-bold tw:text-sm tw:text-fuchsia-500">
+        <div className="font-bold text-sm text-fuchsia-500">
           <InputText
-            className="tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500"
+            className="py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500"
             placeholder="InputText prop placeholder test"
             defaultValue="InputText prop default value test"
             // value="InputText prop value test"

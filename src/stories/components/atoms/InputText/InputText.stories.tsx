@@ -50,7 +50,7 @@ const Template = (args: InputTextProps) => {
 
   return (
     // <div className={`${css.root}`}>
-    <div className={`${css.root} tw:text-red-500 tw:font-bold tw:text-xs`}>
+    <div className={`${css.root} text-red-500 font-bold text-xs`}>
       <span>InputText: </span>
       <InputText {...args} className={cln} value={value} onChange={onChange} />
       <div className={css.renderTest}>Render Test 1</div>
@@ -81,7 +81,7 @@ export const StoryInputText = {
   args: {
     ...sharedArgs,
     className:
-      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
+      "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
   },
   parameters: {
     layout: "fullscreen",
@@ -94,7 +94,7 @@ export const StoryInputTextMultiline = {
   args: {
     ...sharedArgs,
     className:
-      "tw:py-1 tw:px-2 tw:text-xs tw:text-fuchsia-500 tw:border tw:border-fuchsia-500",
+      "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
     multiline: true,
     value: `Lorem Ispum,
 

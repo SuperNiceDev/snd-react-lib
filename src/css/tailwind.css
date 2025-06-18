@@ -1,4 +1,4 @@
-@import "tailwindcss" important prefix(tw);
+@import "tailwindcss" important;
 
 :root {
   --cst-color:  #e12afb;

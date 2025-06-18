@@ -5,6 +5,7 @@ import Text from "snd-react-lib/components/atoms/Text";
 import "snd-react-lib/css/base.css";
 import "snd-react-lib/css/base.scss";
 import "snd-react-lib/css/tailwind.css";
+import UseDidMountEffectDemo from "snd-react-lib/stories/hooks/UseDidMountEffect.stories/UseDidMountEffectDemo";
 
 const App = () => {
   return (
@@ -29,6 +30,10 @@ const App = () => {
           />
         </div>
         <code>{`</InputText>`}</code>
+      </div>
+
+      <div className="">
+        <UseDidMountEffectDemo />
       </div>
     </div>
   );

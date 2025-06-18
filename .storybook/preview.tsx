@@ -1,11 +1,11 @@
 import React from "react";
 
+// import { makeDecorator } from "@storybook/preview-api";
+import { Preview } from "@storybook/react";
 // import { StyledEngineProvider } from "@mui/material";
 // import MuiProvider from "snd-react-lib/context/MuiProvider";
 import "snd-react-lib/css/base.css";
 import "snd-react-lib/css/tailwind.css";
-// import { makeDecorator } from "@storybook/preview-api";
-import { Preview } from "@storybook/react";
 
 export const globalTypes = {
   locale: {

@@ -1,9 +1,10 @@
 @import "tailwindcss" important;
 
 :root {
-  --cst-color:  #e12afb;
+  /* --cst-color:  #a00876; */
+  --cst-color:  #2f961f;
 }
 
 @theme {
-  --color-fuchsia-500: var(--cst-color);
+  /* --color-fuchsia-800: var(--cst-color); */
 }

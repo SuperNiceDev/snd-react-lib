@@ -2,7 +2,11 @@ import React, { useState } from "react";
 
 import useDidMountEffect from "snd-react-lib/hooks/useDidMountEffect";
 
-const UseDidMountEffectDemo = () => {
+type Props = {
+  className?: string;
+};
+
+const UseDidMountEffectDemo = ({ className }: Props) => {
   const [count, setCount] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
 
@@ -15,7 +19,8 @@ const UseDidMountEffectDemo = () => {
       <code>{`<UseDidMountEffectDemo>`}</code>
       <div>
         <button
-          className="py-1 px-3 text-white bg-fuchsia-500 rounded"
+          // className="py-1 px-3 text-white_ text-gray-100 bg-fuchsia-800 rounded-sm"
+          className={className}
           onClick={() => setCount((prev) => prev + 1)}
         >
           Increment

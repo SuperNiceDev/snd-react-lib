@@ -80,8 +80,7 @@ export const StoryInputText = {
   render: (args: StoryType) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className:
-      "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
+    className: "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
   },
   parameters: {
     layout: "fullscreen",
@@ -93,8 +92,7 @@ export const StoryInputTextMultiline = {
   render: (args: InputTextProps) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className:
-      "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
+    className: "py-1 px-2 text-xs text-fuchsia-500 border border-fuchsia-500",
     multiline: true,
     value: `Lorem Ispum,
 

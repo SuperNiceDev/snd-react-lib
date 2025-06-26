@@ -4,8 +4,8 @@ Welcome to [SuperNice Dev](https://www.supernice-dev.com/en) React library.
 
 This will become a collection of components, hook and utils which I use in projects very often and now want to share with the community.
 
-Feel free to use, fork and share. You are also welcome to raise questions and issues. 
-
+Feel free to use, fork, improve or share. You are also welcome to raise questions and issues. 
+The code is still work in progress, but constantly improved.
 The plan is to add one new item every few days.
 
 ## Main Technologies

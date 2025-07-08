@@ -63,6 +63,7 @@
     "postcss": "^8.5.3",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.13",
     "react-refresh": "^0.17.0",
     "sass": "^1.87.0",
     "sass-loader": "^16.0.5",

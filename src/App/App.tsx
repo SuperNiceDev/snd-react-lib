@@ -13,7 +13,7 @@ const App = () => {
       <div className="my-2">
         <code>{`<Text>`}</code>
         <Text
-          className="font-bold text-sm text-fuchsia-800"
+          className="text-sm font-bold text-fuchsia-800"
           text="Text text prop test"
         />
         <code>{`</Text>`}</code>
@@ -21,9 +21,9 @@ const App = () => {
 
       <div className="my-2">
         <code>{`<InputText>`}</code>
-        <div className="font-bold text-sm text-fuchsia-800">
+        <div className="text-sm font-bold text-fuchsia-800">
           <InputText
-            className="py-1 px-2 text-xs text-fuchsia-800 border border-fuchsia-800"
+            className="border border-fuchsia-800 px-2 py-1 text-xs text-fuchsia-800"
             placeholder="InputText prop placeholder test"
             defaultValue="InputText prop default value test"
             // value="InputText prop value test"
@@ -33,7 +33,7 @@ const App = () => {
       </div>
 
       <div className="my-2">
-        <UseDidMountEffectDemo className="py-1 px-3 text-white_ text-gray-300 bg-fuchsia-800 rounded-sm" />
+        <UseDidMountEffectDemo className="text-white_ rounded-sm bg-fuchsia-800 px-3 py-1 text-gray-300" />
       </div>
     </div>
   );

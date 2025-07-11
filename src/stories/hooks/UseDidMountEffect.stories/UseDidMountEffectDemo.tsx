@@ -19,7 +19,7 @@ const UseDidMountEffectDemo = ({ className }: Props) => {
       <code>{`<UseDidMountEffectDemo>`}</code>
       <div>
         <button
-          // className="py-1 px-3 text-white_ text-gray-100 bg-fuchsia-800 rounded-sm"
+          // className="rounded-sm bg-fuchsia-800 px-3 py-1 text-gray-100"
           className={className}
           onClick={() => setCount((prev) => prev + 1)}
         >

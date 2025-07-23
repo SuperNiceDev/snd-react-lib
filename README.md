@@ -39,6 +39,16 @@ The plan is to add one new item every few days.
 - install Node.js:
 https://nodejs.org/en/download
 
+
+- install yarn:
+https://yarnpkg.com/getting-started/install
+
+Enable corepack
+(https://nodejs.org/api/corepack.html)
+```bash
+corepack enable
+```
+
 - install yarn:
 https://yarnpkg.com/getting-started/install
 https://classic.yarnpkg.com/en/docs/install#mac-stable

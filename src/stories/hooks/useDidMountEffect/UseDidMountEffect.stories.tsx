@@ -1,7 +1,7 @@
 import React from "react";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import UseDidMountEffectDemo from "snd-react-lib/stories/hooks/UseDidMountEffect.stories/UseDidMountEffectDemo";
+import UseDidMountEffectDemo from "snd-react-lib/stories/hooks/useDidMountEffect/UseDidMountEffectDemo";
 
 const meta: Meta<typeof UseDidMountEffectDemo> = {
   title: "Hooks/useDidMountEffect",

@@ -1,10 +1,11 @@
 /* @import "tailwindcss" important; */
 @import "tailwindcss";
 
+
 :root {
-  /* --cst-color:  #2f961f; */
-  /* --cst-color:  var(--color-fuchsia-800); */
-  --cst-color:  #a00876;
+  --cst-color: #a00876;
+  /* --cst-color: #375fb4; */
+  --cst-color-code: #999999;
 
   --foreground: var(--cst-color);
   --background: white;
@@ -13,12 +14,5 @@
 .dark {
 }
 
-@theme {
-  /* --color-fuchsia-800: var(--cst-color); */
-}
-
-/* ::: shadcn / Radix */
-/*
 @theme inline {
 }
-*/

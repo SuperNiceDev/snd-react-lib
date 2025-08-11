@@ -16,16 +16,12 @@ type Story = StoryObj<typeof UseDidMountEffectDemo>;
 
 export const Basic: Story = {
   name: "Default Usage",
-  render: () => (
-    <UseDidMountEffectDemo className="text-white_ rounded-sm bg-fuchsia-800 px-3 py-1 text-gray-300" />
-  ),
+  render: () => <UseDidMountEffectDemo className="" />,
 };
 
 export const MultipleIncrements: Story = {
   name: "Multiple Dependency Changes",
-  render: () => (
-    <UseDidMountEffectDemo className="text-white_ rounded-sm bg-fuchsia-800 px-3 py-1 text-gray-300" />
-  ),
+  render: () => <UseDidMountEffectDemo className="" />,
   play: async ({ canvasElement }) => {
     const button = canvasElement.querySelector("button");
     if (button) {

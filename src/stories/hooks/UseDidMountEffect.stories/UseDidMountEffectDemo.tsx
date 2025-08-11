@@ -15,11 +15,11 @@ const UseDidMountEffectDemo = ({ className }: Props) => {
   }, [count]);
 
   return (
-    <div>
+    <div className={`UseDidMountEffectDemo${className ? ` ${className}` : ""}`}>
       <code>{`<UseDidMountEffectDemo>`}</code>
       <div>
         <button
-          className={className}
+          className="cursor-pointer rounded-md border bg-[var(--foreground)] px-3 py-1 text-[var(--background)]"
           onClick={() => setCount((prev) => prev + 1)}
         >
           Increment

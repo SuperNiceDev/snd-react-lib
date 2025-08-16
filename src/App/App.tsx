@@ -12,6 +12,7 @@ const App = () => {
     <div className="App text-[var(--foreground)]">
       <div className="my-2">
         <code>{`<Text>`}</code>
+        <Text className="" text="Text text prop test" />
         <Text className="text-sm font-bold" text="Text text prop test" />
         <code>{`</Text>`}</code>
       </div>

@@ -47,7 +47,7 @@ export const Story1: StoryType = {
   name: "Text",
   render: (args: TextProps) => <Template {...args} />,
   args: {
-    className: "text-3xl text-fuchsia-800 font-bold",
+    className: "text-3xl text-fuchsia-800_ text-[var(--foreground)] font-bold",
     Tag: Tags.p,
     text: "my text",
   },

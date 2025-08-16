@@ -42,14 +42,11 @@ const Template = (args: InputTextProps) => {
     setValue(evt.target.value);
   };
 
-  // log("value: ", value);
-
   const cln = multiline
     ? `${css.myInput} ${css.myInputMultiline} ${className}`
     : `${css.myInput} ${className}`;
 
   return (
-    // <div className={`${css.root}`}>
     <div className={`${css.root} text-xs font-bold text-red-500`}>
       <span>InputText: </span>
       <InputText {...args} className={cln} value={value} onChange={onChange} />
@@ -80,7 +77,8 @@ export const StoryInputText = {
   render: (args: StoryType) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className: "py-1 px-2 text-xs text-fuchsia-800 border border-fuchsia-800",
+    className:
+      "py-1 px-2 text-xs text-fuchsia-800_ text-[var(--foreground)] border border-fuchsia-800_ border-[var(--foreground)]",
   },
   parameters: {
     layout: "fullscreen",
@@ -92,7 +90,8 @@ export const StoryInputTextMultiline = {
   render: (args: InputTextProps) => <Template {...args} />,
   args: {
     ...sharedArgs,
-    className: "py-1 px-2 text-xs text-fuchsia-800 border border-fuchsia-800",
+    className:
+      "py-1 px-2 text-xs text-fuchsia-800_ text-[var(--foreground)] border border-fuchsia-800_ border-[var(--foreground)]",
     multiline: true,
     value: `Lorem Ispum,
 

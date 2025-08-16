@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 // import Text, { Tags } from "snd-react-lib/components/atoms/Text";
 import Text, { Tags, TextProps } from "snd-react-lib/components/atoms/Text";
 

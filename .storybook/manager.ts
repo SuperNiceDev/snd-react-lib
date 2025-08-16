@@ -1,5 +1,5 @@
 // https://storybook.js.org/docs/react/configure/features-and-behavior
-import { addons } from "@storybook/manager-api";
+import { addons } from "storybook/manager-api";
 
 import supernice_io from "./themes/supernicedev";
 

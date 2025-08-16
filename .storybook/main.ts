@@ -6,33 +6,27 @@ import webpackDevConf from "../webpack.config.ts";
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   staticDirs: ["../public"],
-  addons: [
-    "@storybook/addon-webpack5-compiler-swc",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    {
-      name: "@storybook/addon-styling-webpack",
-      options: {
-        rules: [
-          {
-            test: /\.css$/,
-            use: [
-              "style-loader",
-              {
-                loader: "css-loader",
-                options: { importLoaders: 1 },
-              },
-              {
-                loader: "postcss-loader",
-                options: { implementation: require.resolve("postcss") },
-              },
-            ],
-          },
-        ],
-      },
+  addons: ["@storybook/addon-webpack5-compiler-swc", "@storybook/addon-links", {
+    name: "@storybook/addon-styling-webpack",
+    options: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: { importLoaders: 1 },
+            },
+            {
+              loader: "postcss-loader",
+              options: { implementation: require.resolve("postcss") },
+            },
+          ],
+        },
+      ],
     },
-  ],
+  }, "@storybook/addon-docs"],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},

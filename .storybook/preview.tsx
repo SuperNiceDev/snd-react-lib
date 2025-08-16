@@ -1,6 +1,6 @@
 // import React from "react";
-// import { makeDecorator } from "@storybook/preview-api";
-import { Preview } from "@storybook/react";
+// import { makeDecorator } from "storybook/preview-api";
+import { Preview } from "@storybook/react-webpack5";
 // import { StyledEngineProvider } from "@mui/material";
 // import MuiProvider from "snd-react-lib/context/MuiProvider";
 import "snd-react-lib/css/base.css";

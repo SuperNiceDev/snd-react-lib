@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { ComponentPropsWithRef, useEffect, useState } from "react";
 
-import { action } from "storybook/actions";
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import InputText, {
-  InputTextProps,
+  // InputTextProps,
   InputTypes,
 } from "snd-react-lib/components/atoms/InputText";
+import { action } from "storybook/actions";
 
 import css from "./InputText.stories.module.scss";
 
-// type InputTextProps = typeof InputText;
+type InputTextProps = ComponentPropsWithRef<typeof InputText>;
 
 export default {
   component: InputText,
@@ -20,10 +20,10 @@ export default {
       control: {
         type: "radio",
       },
-      options: [InputTypes.text, InputTypes.password, InputTypes.number],
+      options: Object.values(InputTypes),
     },
   },
-} as Meta<InputTextProps>;
+} satisfies Meta<InputTextProps>;
 
 const Template = (args: InputTextProps) => {
   const { className, multiline } = args;

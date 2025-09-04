@@ -1,31 +1,44 @@
-import React, { ComponentPropsWithRef, useEffect, useState } from "react";
+import React, {
+  ChangeEvent,
+  ComponentPropsWithRef,
+  useEffect,
+  useState,
+} from "react";
 
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import InputText, {
-  // InputTextProps,
+  AutoComplete,
   InputTypes,
 } from "snd-react-lib/components/atoms/InputText";
 import { action } from "storybook/actions";
 
 import css from "./InputText.stories.module.scss";
 
-type InputTextProps = ComponentPropsWithRef<typeof InputText>;
+type Props = ComponentPropsWithRef<typeof InputText>;
 
-export default {
+const meta = {
   component: InputText,
   argTypes: {
     type: {
-      name: "InputTypes",
-      description: "my description",
+      // name: "InputTypes",
+      // description: "my description",
       control: {
         type: "radio",
       },
       options: Object.values(InputTypes),
     },
+    autoComplete: {
+      control: {
+        type: "radio",
+      },
+      options: Object.values(AutoComplete),
+    },
   },
-} satisfies Meta<InputTextProps>;
+} satisfies Meta<typeof InputText>;
 
-const Template = (args: InputTextProps) => {
+export default meta;
+
+const Template = (args: Props) => {
   const { className, multiline } = args;
   const [value, setValue] = useState(args.value);
 
@@ -36,7 +49,9 @@ const Template = (args: InputTextProps) => {
     // eslint-disable-next-line
   }, [args.value]);
 
-  const onChange = (evt: any) => {
+  const onChange = (
+    evt: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     console.log("onChange: ", evt.target.value);
     action("onChange")(evt.target.value);
     setValue(evt.target.value);
@@ -57,43 +72,34 @@ const Template = (args: InputTextProps) => {
   );
 };
 
-type StoryType = StoryObj<InputTextProps>;
+type StoryType = StoryObj<typeof meta>;
 
 const sharedArgs = {
-  name: "my_name",
+  className:
+    "py-1 px-2 text-xs text-fuchsia-800_ text-[var(--foreground)] border border-fuchsia-800_ border-[var(--foreground)]",
   type: InputTypes.text,
+  value: "my value",
+  // defaultValue: "my defaultValue",
+  placeholder: "my placeholder",
+  name: "my_name",
+  ariaLabel: "my ariaLabel",
   multiline: false,
   disabled: false,
   focus: true,
-  // defaultValue: "my defaultValue",
-  value: "my value",
-  placeholder: "my placeholder",
-  ariaLabel: "my ariaLabel",
+  autoComplete: AutoComplete.on,
   maxLength: 12,
 };
 
 export const StoryInputText = {
   name: "InputText",
   render: (args: StoryType) => <Template {...args} />,
-  args: {
-    ...sharedArgs,
-    className:
-      "py-1 px-2 text-xs text-fuchsia-800_ text-[var(--foreground)] border border-fuchsia-800_ border-[var(--foreground)]",
-  },
   parameters: {
     layout: "fullscreen",
   },
+  args: sharedArgs,
 };
 
-export const StoryInputTextMultiline = {
-  name: "InputText multiline",
-  render: (args: InputTextProps) => <Template {...args} />,
-  args: {
-    ...sharedArgs,
-    className:
-      "py-1 px-2 text-xs text-fuchsia-800_ text-[var(--foreground)] border border-fuchsia-800_ border-[var(--foreground)]",
-    multiline: true,
-    value: `Lorem Ispum,
+const multilineValue = `Lorem Ispum,
 
 Lorem Ispum,
 
@@ -102,9 +108,17 @@ Lorem Ispum,
 Lorem Ispum,
 
 Lorem Ispum
-`,
-  },
+`;
+
+export const StoryInputTextMultiline = {
+  name: "InputText multiline",
+  render: (args: Props) => <Template {...args} />,
   parameters: {
     layout: "fullscreen",
+  },
+  args: {
+    ...sharedArgs,
+    multiline: true,
+    value: multilineValue,
   },
 };

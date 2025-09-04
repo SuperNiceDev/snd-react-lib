@@ -3,9 +3,6 @@ import React, { MouseEvent, ReactNode } from "react";
 import css from "./Text.module.scss";
 
 export enum Tags {
-  div = "div",
-  span = "span",
-  label = "label",
   p = "p",
   h1 = "h1",
   h2 = "h2",
@@ -13,6 +10,9 @@ export enum Tags {
   h4 = "h4",
   h5 = "h5",
   h6 = "h6",
+  div = "div",
+  span = "span",
+  label = "label",
 }
 
 export type TextProps = {

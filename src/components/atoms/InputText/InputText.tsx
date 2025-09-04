@@ -1,4 +1,5 @@
 import React, {
+  ChangeEvent,
   InputHTMLAttributes,
   ReactElement,
   useEffect,
@@ -38,6 +39,7 @@ export type InputTextProps = InputHTMLAttributes<
   focus?: boolean;
   autoComplete?: AutoComplete | string;
   ariaLabel?: string;
+  onChange?: (evt: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };
 
 const InputText = ({

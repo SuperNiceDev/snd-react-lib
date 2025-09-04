@@ -1,14 +1,13 @@
-import React from "react";
+import React, { ComponentPropsWithRef } from "react";
 
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
-// import Text, { Tags } from "snd-react-lib/components/atoms/Text";
-import Text, { Tags, TextProps } from "snd-react-lib/components/atoms/Text";
+import Text, { Tags } from "snd-react-lib/components/atoms/Text";
 
 import css from "./Text.stories.module.scss";
 
-// type TextProps = typeof Text;
+type Props = ComponentPropsWithRef<typeof Text>;
 
-const meta: Meta<TextProps> = {
+const meta = {
   component: Text,
   argTypes: {
     Tag: {
@@ -16,24 +15,14 @@ const meta: Meta<TextProps> = {
       description: "",
       defaultValue: Tags.p,
       control: "inline-radio",
-      options: [
-        Tags.div,
-        Tags.span,
-        Tags.label,
-        Tags.p,
-        Tags.h1,
-        Tags.h2,
-        Tags.h3,
-        Tags.h4,
-        Tags.h5,
-        Tags.h6,
-      ],
+      options: Object.values(Tags),
     },
   },
-};
+} satisfies Meta<typeof Text>;
+
 export default meta;
 
-const Template = (args: TextProps) => {
+const Template = (args: Props) => {
   return (
     <div className={css.root}>
       <Text {...args} />
@@ -41,11 +30,11 @@ const Template = (args: TextProps) => {
   );
 };
 
-type StoryType = StoryObj<TextProps>;
+type StoryType = StoryObj<Props>;
 
 export const Story1: StoryType = {
   name: "Text",
-  render: (args: TextProps) => <Template {...args} />,
+  render: (args: Props) => <Template {...args} />,
   args: {
     className: "text-3xl text-fuchsia-800_ text-[var(--foreground)] font-bold",
     Tag: Tags.p,

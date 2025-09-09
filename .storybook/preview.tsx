@@ -1,9 +1,9 @@
 // import React from "react";
 // import { makeDecorator } from "storybook/preview-api";
-import { Preview } from "@storybook/react-webpack5";
 // import { StyledEngineProvider } from "@mui/material";
 // import MuiProvider from "snd-react-lib/context/MuiProvider";
-
+import { withThemeByClassName } from "@storybook/addon-themes";
+import { Preview } from "@storybook/react-webpack5";
 // import "snd-react-lib/css/base.css";
 import "snd-react-lib/css/tailwind.css";
 
@@ -52,8 +52,20 @@ const preview: Preview = {
       default: "Light",
     },
   },
-  // decorators: [muiDecorator],
   // tags: ["autodocs"],
+  // decorators: [muiDecorator],
+  decorators: [
+    withThemeByClassName({
+      themes: { light: "", dark: "dark" },
+      defaultTheme: "light",
+    }),
+    (Story) => {
+      const className = "bg-[var(--background)]";
+      const classNameArr = className.split(" ");
+      document.body.classList.add(...classNameArr);
+      return Story();
+    },
+  ],
 };
 
 export default preview;

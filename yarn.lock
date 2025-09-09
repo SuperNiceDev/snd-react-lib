@@ -1746,6 +1746,13 @@
   resolved "https://registry.npmjs.org/@storybook/addon-styling-webpack/-/addon-styling-webpack-2.0.0.tgz#3e854c82a835a6df439a69e307f337b39b4a4cab"
   integrity sha512-N8jWhWnk3/nbL4P9zl0OEV/47P0Cxn/kPzSHjdAClyDYnqj9jI6upeLsraZgIV9Ro3QSeqeIloeXb1zMasWpOw==
 
+"@storybook/addon-themes@^9.1.5":
+  version "9.1.5"
+  resolved "https://registry.npmjs.org/@storybook/addon-themes/-/addon-themes-9.1.5.tgz#f90cd60edebc6ce557631f29a4ee760ee119b49b"
+  integrity sha512-YGvI1RBkf46o0DTnPTkjfNSQKvhidtdiotyIPlfzheL4XlbOvnXrfkbv//dyweG2Lkl4+E8G2OAOY6kJwUJYyQ==
+  dependencies:
+    ts-dedent "^2.0.0"
+
 "@storybook/addon-webpack5-compiler-swc@^3.0.0":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@storybook/addon-webpack5-compiler-swc/-/addon-webpack5-compiler-swc-3.0.0.tgz#78388c5d8a8375fe99f3b964057bc0402274e7d5"
@@ -8109,6 +8116,11 @@ tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.8
   version "2.8.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
+
+tw-animate-css@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.npmjs.org/tw-animate-css/-/tw-animate-css-1.3.8.tgz#9d0c4820630fa04e8afe7a4670ab31d84ec44593"
+  integrity sha512-Qrk3PZ7l7wUcGYhwZloqfkWCmaXZAoqjkdbIDvzfGshwGtexa/DAs9koXxIkrpEasyevandomzCBAV1Yyop5rw==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

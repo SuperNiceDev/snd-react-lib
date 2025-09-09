@@ -30,6 +30,7 @@ const config = {
       },
     },
     "@storybook/addon-docs",
+    "@storybook/addon-themes",
   ],
   framework: {
     name: "@storybook/react-webpack5",

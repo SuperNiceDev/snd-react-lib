@@ -16,7 +16,7 @@ export default meta;
 
 const Template = () => {
   return (
-    <div className="text-xs font-bold text-red-500">
+    <div className="">
       <SndReactLibComponents />
     </div>
   );

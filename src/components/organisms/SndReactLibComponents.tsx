@@ -8,7 +8,7 @@ import UseDidMountEffectDemo from "snd-react-lib/stories/hooks/useDidMountEffect
 
 export default function SndReactLibComponents() {
   return (
-    <div className="SndReactLibComponents twCenterContent text-[var(--primary-color)]">
+    <div className="SndReactLibComponents text-[var(--primary-color)]">
       <code>{`<SndReactLibComponents>`}</code>
       <div className="pl-4">
         <div className="my-2">

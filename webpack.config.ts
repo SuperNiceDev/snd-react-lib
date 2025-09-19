@@ -9,6 +9,7 @@ interface Configuration extends WebpackConfiguration {
 }
 
 const config: Configuration = {
+  // mode: "development",
   entry: "./src/index.tsx",
   resolve: {
     alias: {
@@ -98,8 +99,19 @@ const config: Configuration = {
     }),
     new ReactRefreshWebpackPlugin(),
   ],
+  devtool: "eval-cheap-module-source-map",
   devServer: {
     hot: true,
+    // port: "auto",
+    // open: true,
+    historyApiFallback: true,
+    client: {
+      overlay: false,
+      // overlay: {
+      //   warnings: false,
+      //   errors: false,
+      // },
+    },
   },
 };
 

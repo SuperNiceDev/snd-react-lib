@@ -60,11 +60,16 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => {
-      const className = "bg-[var(--background)]";
+      const className = "____XXX___ bg-[var(--background)]";
       const classNameArr = className.split(" ");
       document.body.classList.add(...classNameArr);
       return Story();
     },
+    // (Story) => (
+    //   <div className="____XXX___ bg-[var(--background)]">
+    //     <Story />
+    //   </div>
+    // ),
   ],
 };
 

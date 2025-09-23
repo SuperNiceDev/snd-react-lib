@@ -93,8 +93,7 @@
 :root {
   --cst-color: #a00876;
   /* --cst-color: #375fb4; */
-  --primary-color: var(--cst-color);
-
+  
   --cst-color-code: #999999;
 }
 
@@ -125,8 +124,9 @@ code {
 @layer base {
   * {
     /* @apply text-green-600 */
+    --primary-color: var(--cst-color);
   }
-
+  
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

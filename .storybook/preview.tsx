@@ -45,31 +45,35 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      values: [
-        { name: "Dark", value: "#333" },
-        { name: "Light", value: "#FFF" },
-      ],
-      default: "Light",
+      // values: [
+      //   { name: "Dark", value: "#333" },
+      //   { name: "Light", value: "#FFF" },
+      // ],
+      // default: "Light",
+      disable: true,
     },
   },
   // tags: ["autodocs"],
   // decorators: [muiDecorator],
   decorators: [
+    // withThemeByClassName({
+    //   themes: { light: "", dark: "dark" },
+    //   defaultTheme: "light",
+    // }),
+    // (Story) => {
+    //   const className = "____XXX___ bg-[var(--background)]";
+    //   const classNameArr = className.split(" ");
+    //   document.body.classList.add(...classNameArr);
+    //   return Story();
+    // },
     withThemeByClassName({
-      themes: { light: "", dark: "dark" },
-      defaultTheme: "light",
+      themes: {
+        light: "bg-[var(--background)]",
+        dark: "dark bg-[var(--background)]",
+      },
+      defaultTheme: "dark",
+      parentSelector: "body",
     }),
-    (Story) => {
-      const className = "____XXX___ bg-[var(--background)]";
-      const classNameArr = className.split(" ");
-      document.body.classList.add(...classNameArr);
-      return Story();
-    },
-    // (Story) => (
-    //   <div className="____XXX___ bg-[var(--background)]">
-    //     <Story />
-    //   </div>
-    // ),
   ],
 };
 

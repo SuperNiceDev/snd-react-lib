@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import Dotenv from "dotenv-webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import { Configuration as WebpackConfiguration } from "webpack";
@@ -98,6 +99,10 @@ const config: Configuration = {
       template: "./public/index.html",
     }),
     new ReactRefreshWebpackPlugin(),
+    new Dotenv({
+      // path: dotenvFilename,
+      path: ".env",
+    }),
   ],
   devtool: "eval-cheap-module-source-map",
   devServer: {

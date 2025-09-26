@@ -5,10 +5,13 @@ import React from "react";
 import InputText from "snd-react-lib/components/atoms/InputText";
 import Text from "snd-react-lib/components/atoms/Text";
 import UseDidMountEffectDemo from "snd-react-lib/stories/hooks/useDidMountEffect/UseDidMountEffectDemo";
+import { cnCmp } from "snd-react-lib/utils/tailwind/cnCmp";
 
 export default function SndReactLibComponents() {
   return (
-    <div className="SndReactLibComponents text-[var(--primary-color)]">
+    <div
+      className={cnCmp("SndReactLibComponents", "text-[var(--primary-color)]")}
+    >
       <code>{`<SndReactLibComponents>`}</code>
       <div className="pl-4">
         <div className="my-2">

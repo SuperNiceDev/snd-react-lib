@@ -47,7 +47,7 @@
       "snd-react-lib/*": ["src/*"],
     },
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "types": ["@testing-library/jest-dom"]
+    // "types": ["@testing-library/jest-dom"]
   },
 
   // --- custom
